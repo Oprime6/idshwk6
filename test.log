@@ -1,0 +1,1553 @@
+[05/22/22]seed@VM:~$ date
+Sun May 22 01:56:56 EDT 2022
+
+root@VM:/home/seed# cat /etc/issue
+Ubuntu 16.04.2 LTS \n \l
+
+root@VM:/home/seed# uname -a
+Linux VM 4.8.0-36-generic #36~16.04.1-Ubuntu SMP Sun Feb 5 09:39:41 UTC 2017 i686 i686 i686 GNU/Linux
+
+root@VM:/home/seed# cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+stepping	: 12
+cpu MHz		: 2112.002
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht nx rdtscp constant_tsc xtopology nonstop_tsc eagerfpu pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch fsgsbase avx2 invpcid rdseed clflushopt
+bugs		:
+bogomips	: 4224.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+root@VM:/home/seed# cat /proc/meminfo
+MemTotal:        1023124 kB
+MemFree:           69452 kB
+MemAvailable:     247816 kB
+Buffers:           21016 kB
+Cached:           306220 kB
+SwapCached:         5132 kB
+Active:           460580 kB
+Inactive:         415304 kB
+Active(anon):     290504 kB
+Inactive(anon):   287720 kB
+Active(file):     170076 kB
+Inactive(file):   127584 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:        135112 kB
+HighFree:           2020 kB
+LowTotal:         888012 kB
+LowFree:           67432 kB
+SwapTotal:       1046524 kB
+SwapFree:         995268 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        540252 kB
+Mapped:           125960 kB
+Shmem:             29576 kB
+Slab:              34924 kB
+SReclaimable:      20084 kB
+SUnreclaim:        14840 kB
+KernelStack:        3488 kB
+PageTables:         9532 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1558084 kB
+Committed_AS:    3808848 kB
+VmallocTotal:     122880 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+AnonHugePages:    159744 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       38904 kB
+DirectMap2M:      874496 kB
+
+root@VM:/home/seed# uptime
+ 02:08:01 up 14 min,  2 users,  load average: 0.06, 0.11, 0.12
+
+root@VM:/home/seed# fdisk –l
+
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+root@VM:/home/seed# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            481M     0  481M   0% /dev
+tmpfs           100M  6.2M   94M   7% /run
+/dev/sda1        19G  6.8G   11G  39% /
+tmpfs           500M  164K  500M   1% /dev/shm
+tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+tmpfs           500M     0  500M   0% /sys/fs/cgroup
+tmpfs           100M   60K  100M   1% /run/user/1000
+
+root@VM:/home/seed# dpkg --get-selections
+php-mbstring					install
+php-mcrypt					install
+php-pear					install
+php-phpseclib					install
+php-tcpdf					install
+php-xml						install
+php7.0						install
+php7.0-cli					install
+php7.0-common					install
+php7.0-fpm					install
+php7.0-gd					install
+php7.0-json					install
+php7.0-mbstring					install
+php7.0-mcrypt					install
+php7.0-mysql					install
+php7.0-opcache					install
+php7.0-readline					install
+php7.0-xml					install
+phpmyadmin					install
+pinentry-curses					install
+pinentry-gnome3					install
+pkg-config					install
+plainbox-provider-checkbox			install
+plainbox-provider-resource-generic		install
+plainbox-secure-policy				install
+plymouth					install
+plymouth-label					install
+plymouth-theme-ubuntu-logo			install
+plymouth-theme-ubuntu-text			install
+pm-utils					install
+policykit-1					install
+policykit-1-gnome				install
+policykit-desktop-privileges			install
+poppler-data					install
+poppler-utils					install
+popularity-contest				install
+powermgmt-base					install
+ppp						install
+pppconfig					install
+pppoeconf					install
+pptp-linux					install
+printer-driver-brlaser				install
+printer-driver-c2esp				install
+printer-driver-foo2zjs				install
+printer-driver-foo2zjs-common			install
+printer-driver-gutenprint			install
+printer-driver-hpcups				install
+printer-driver-min12xxw				install
+printer-driver-pnm2ppa				install
+printer-driver-postscript-hp			install
+printer-driver-ptouch				install
+printer-driver-pxljr				install
+printer-driver-sag-gdi				install
+printer-driver-splix				install
+procps						install
+psmisc						install
+pulseaudio					install
+pulseaudio-module-bluetooth			install
+pulseaudio-module-x11				install
+pulseaudio-utils				install
+pyotherside					install
+python						install
+python-all					install
+python-all-dev					install
+python-apt-common				install
+python-argcomplete				install
+python-argh					install
+python-backports.ssl-match-hostname		install
+python-blinker					install
+python-bs4					install
+python-cairo					install
+python-certifi					install
+python-cffi-backend				install
+python-chardet					install
+python-click					install
+python-colorama					install
+python-configargparse				install
+python-construct				install
+python-cryptography				install
+python-dbus					install
+python-dev					install
+python-enum34					install
+python-feedparser				install
+python-gconf					install
+python-gi					install
+python-gnome2					install
+python-gobject					install
+python-gobject-2				install
+python-gtk2					install
+python-hpack					install
+python-html2text				install
+python-html5lib					install
+python-idna					install
+python-ipaddress				install
+python-keybinder				install
+python-libxml2					install
+python-lxml					install
+python-minimal					install
+python-netlib					install
+python-notify					install
+python-openssl					install
+python-passlib					install
+python-pathtools				install
+python-pil:i386					install
+python-pip					install
+python-pip-whl					install
+python-pkg-resources				install
+python-pyasn1					install
+python-pycurl					install
+python-pymysql					install
+python-pyorbit					install
+python-pyparsing				install
+python-pyperclip				install
+python-qt4					install
+python-setuptools				install
+python-sip					install
+python-six					install
+python-talloc					install
+python-tornado					install
+python-urwid					install
+python-utidylib					install
+python-vte					install
+python-watchdog					install
+python-wheel					install
+python-yaml					install
+python2.7					install
+python2.7-dev					install
+python2.7-minimal				install
+python3						install
+python3-apport					install
+python3-apt					install
+python3-aptdaemon				install
+python3-aptdaemon.gtk3widgets			install
+python3-aptdaemon.pkcompat			install
+python3-blinker					install
+python3-brlapi					install
+python3-bs4					install
+python3-cairo					install
+python3-cffi-backend				install
+python3-chardet					install
+python3-checkbox-support			install
+python3-commandnotfound				install
+python3-cryptography				install
+python3-cups					install
+python3-cupshelpers				install
+python3-dbus					install
+python3-debian					install
+python3-defer					install
+python3-distupgrade				install
+python3-feedparser				install
+python3-gdbm:i386				install
+python3-gi					install
+python3-gi-cairo				install
+python3-guacamole				install
+python3-html5lib				install
+python3-httplib2				install
+python3-idna					install
+python3-jinja2					install
+python3-jwt					install
+python3-louis					install
+python3-lxml					install
+python3-mako					install
+python3-markupsafe				install
+python3-minimal					install
+python3-oauthlib				install
+python3-padme					install
+python3-pexpect					install
+python3-pil:i386				install
+python3-pkg-resources				install
+python3-plainbox				install
+python3-problem-report				install
+python3-ptyprocess				install
+python3-pyasn1					install
+python3-pyatspi					install
+python3-pycurl					install
+python3-pyparsing				install
+python3-renderpm:i386				install
+python3-reportlab				install
+python3-reportlab-accel:i386			install
+python3-requests				install
+python3-six					install
+python3-software-properties			install
+python3-speechd					install
+python3-systemd					install
+python3-uno					install
+python3-update-manager				install
+python3-urllib3					install
+python3-xdg					install
+python3-xkit					install
+python3-xlsxwriter				install
+python3.5					install
+python3.5-minimal				install
+qdbus						install
+qml-module-io-thp-pyotherside:i386		install
+qml-module-qt-labs-folderlistmodel:i386		install
+qml-module-qt-labs-settings:i386		install
+qml-module-qtfeedback:i386			install
+qml-module-qtgraphicaleffects:i386		install
+qml-module-qtquick-layouts:i386			install
+qml-module-qtquick-window2:i386			install
+qml-module-qtquick2:i386			install
+qml-module-qttest:i386				install
+qml-module-ubuntu-components:i386		install
+qml-module-ubuntu-layouts:i386			install
+qml-module-ubuntu-onlineaccounts:i386		install
+qml-module-ubuntu-performancemetrics:i386	install
+qml-module-ubuntu-test:i386			install
+qml-module-ubuntu-web:i386			install
+qmlscene					install
+qpdf						install
+qt-at-spi:i386					install
+qtchooser					install
+qtcore4-l10n					install
+qtdeclarative5-accounts-plugin:i386		install
+qtdeclarative5-dev-tools			install
+qtdeclarative5-qtquick2-plugin:i386		install
+qtdeclarative5-test-plugin:i386			install
+qtdeclarative5-ubuntu-ui-toolkit-plugin		install
+qtdeclarative5-unity-action-plugin:i386		install
+qttranslations5-l10n				install
+rarian-compat					install
+readline-common					install
+remmina						install
+remmina-common					install
+remmina-plugin-rdp				install
+remmina-plugin-vnc				install
+rename						install
+resolvconf					install
+rfkill						install
+rhythmbox					install
+rhythmbox-data					install
+rhythmbox-plugin-zeitgeist			install
+rhythmbox-plugins				install
+rsync						install
+rsyslog						install
+rtkit						install
+samba-libs:i386					install
+sane-utils					install
+sbsigntool					install
+seahorse					install
+secureboot-db					install
+sed						install
+sensible-utils					install
+session-migration				install
+session-shortcuts				install
+sessioninstaller				install
+sgml-base					install
+sgml-data					install
+shared-mime-info				install
+shotwell					install
+shotwell-common					install
+signon-keyring-extension			install
+signon-plugin-oauth2				install
+signon-plugin-password				install
+signon-ui					install
+signon-ui-service				install
+signon-ui-x11					install
+signond						install
+simple-scan					install
+snap-confine					install
+snapd						install
+snapd-login-service				install
+sni-qt:i386					install
+software-properties-common			install
+software-properties-gtk				install
+sound-theme-freedesktop				install
+speech-dispatcher				install
+speech-dispatcher-audio-plugins:i386		install
+squashfs-tools					install
+squid						install
+squid-common					install
+squid-langpack					install
+ssh-import-id					install
+ssl-cert					install
+strace						install
+sublime-text					install
+sudo						install
+suru-icon-theme					install
+syslinux					install
+syslinux-common					install
+syslinux-legacy					install
+system-config-printer-common			install
+system-config-printer-gnome			install
+system-config-printer-udev			install
+systemd						install
+systemd-sysv					install
+sysv-rc						install
+sysvinit-utils					install
+t1utils						install
+tango-icon-theme				install
+tar						install
+tcl						install
+tcl8.5						install
+tcl8.6						install
+tcpd						install
+tcpdump						install
+telnet						install
+telnetd						install
+terminator					install
+thermald					install
+thunar						install
+thunar-data					install
+thunar-volman					install
+thunderbird					install
+thunderbird-gnome-support			install
+thunderbird-locale-en				install
+thunderbird-locale-en-us			install
+time						install
+tk						install
+tk8.5						install
+tk8.6						install
+toshset						install
+totem						install
+totem-common					install
+totem-plugins					install
+traceroute					install
+transmission-common				install
+transmission-gtk				install
+ttf-ancient-fonts-symbola			install
+ttf-ubuntu-font-family				install
+tumbler						install
+tumbler-common					install
+tzdata						install
+ubuntu-artwork					install
+ubuntu-core-launcher				install
+ubuntu-desktop					install
+ubuntu-docs					install
+ubuntu-drivers-common				install
+ubuntu-keyring					install
+ubuntu-minimal					install
+ubuntu-mobile-icons				install
+ubuntu-mono					install
+ubuntu-release-upgrader-core			install
+ubuntu-release-upgrader-gtk			install
+ubuntu-session					install
+ubuntu-settings					install
+ubuntu-software					install
+ubuntu-sounds					install
+ubuntu-standard					install
+ubuntu-system-service				install
+ubuntu-touch-sounds				install
+ubuntu-ui-toolkit-theme				install
+ubuntu-wallpapers				install
+ubuntu-wallpapers-xenial			install
+ucf						install
+udev						install
+udisks2						install
+ufw						install
+unattended-upgrades				install
+unity						install
+unity-accessibility-profiles			install
+unity-asset-pool				install
+unity-control-center				install
+unity-control-center-faces			install
+unity-control-center-signon			install
+unity-greeter					install
+unity-gtk-module-common				install
+unity-gtk2-module:i386				install
+unity-gtk3-module:i386				install
+unity-lens-applications				install
+unity-lens-files				install
+unity-lens-music				install
+unity-lens-photos				install
+unity-lens-video				install
+unity-schemas					install
+unity-scope-calculator				install
+unity-scope-chromiumbookmarks			install
+unity-scope-colourlovers			install
+unity-scope-devhelp				install
+unity-scope-firefoxbookmarks			hold
+unity-scope-gdrive				install
+unity-scope-home				install
+unity-scope-manpages				install
+unity-scope-openclipart				install
+unity-scope-texdoc				install
+unity-scope-tomboy				install
+unity-scope-video-remote			install
+unity-scope-virtualbox				install
+unity-scope-yelp				install
+unity-scope-zotero				install
+unity-scopes-master-default			install
+unity-scopes-runner				install
+unity-services					install
+unity-settings-daemon				install
+unity-webapps-common				install
+unity-webapps-qml				install
+unity-webapps-service				install
+uno-libs3					install
+unzip						install
+update-inetd					install
+update-manager					install
+update-manager-core				install
+update-notifier					install
+update-notifier-common				install
+upower						install
+upstart						install
+ure						install
+ureadahead					install
+usb-creator-common				install
+usb-creator-gtk					install
+usb-modeswitch					install
+usb-modeswitch-data				install
+usbmuxd						install
+usbutils					install
+util-linux					install
+uuid-runtime					install
+vbetool						install
+vim						install
+vim-common					install
+vim-runtime					install
+vim-tiny					install
+vino						install
+vsftpd						install
+wamerican					install
+wbritish					install
+webapp-container				install
+webbrowser-app					install
+wget						install
+whiptail					install
+whois						install
+whoopsie					install
+whoopsie-preferences				install
+wireless-regdb					install
+wireless-tools					install
+wireshark					install
+wireshark-common				install
+wireshark-qt					install
+wpasupplicant					install
+x11-apps					install
+x11-common					install
+x11-session-utils				install
+x11-utils					install
+x11-xkb-utils					install
+x11-xserver-utils				install
+xauth						install
+xbitmaps					install
+xbrlapi						install
+xclip						install
+xcursor-themes					install
+xdg-user-dirs					install
+xdg-user-dirs-gtk				install
+xdg-utils					install
+xdiagnose					install
+xfce4						install
+xfce4-appfinder					install
+xfce4-notifyd					install
+xfce4-panel					install
+xfce4-pulseaudio-plugin:i386			install
+xfce4-session					install
+xfce4-settings					install
+xfce4-volumed					install
+xfconf						install
+xfdesktop4					install
+xfdesktop4-data					install
+xfonts-base					install
+xfonts-encodings				install
+xfonts-scalable					install
+xfonts-utils					install
+xfwm4						install
+xinit						install
+xinput						install
+xkb-data					install
+xml-core					install
+xorg						install
+xorg-docs-core					install
+xscreensaver					install
+xscreensaver-data				install
+xserver-common					install
+xserver-xorg-core-hwe-16.04			install
+xserver-xorg-hwe-16.04				install
+xserver-xorg-input-all-hwe-16.04		install
+xserver-xorg-input-evdev-hwe-16.04		install
+xserver-xorg-input-synaptics-hwe-16.04		install
+xserver-xorg-input-wacom-hwe-16.04		install
+xserver-xorg-video-all-hwe-16.04		install
+xserver-xorg-video-amdgpu-hwe-16.04		install
+xserver-xorg-video-ati-hwe-16.04		install
+xserver-xorg-video-fbdev-hwe-16.04		install
+xserver-xorg-video-intel-hwe-16.04		install
+xserver-xorg-video-nouveau-hwe-16.04		install
+xserver-xorg-video-qxl-hwe-16.04		install
+xserver-xorg-video-radeon-hwe-16.04		install
+xserver-xorg-video-vesa-hwe-16.04		install
+xserver-xorg-video-vmware-hwe-16.04		install
+xterm						install
+xubuntu-icon-theme				install
+xul-ext-ubufox					install
+xz-utils					install
+yelp						install
+yelp-xsl					install
+zeitgeist-core					install
+zeitgeist-datahub				install
+zenity						install
+zenity-common					install
+zip						install
+zlib1g:i386					install
+zlib1g-dev:i386					install
+zsh						install
+zsh-common					install
+
+root@VM:/home/seed# /etc/cron*
+bash: /etc/cron.d: Is a directory
+root@VM:/home/seed# cat /etc/cron*
+cat: /etc/cron.d: Is a directory
+cat: /etc/cron.daily: Is a directory
+cat: /etc/cron.hourly: Is a directory
+cat: /etc/cron.monthly: Is a directory
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+cat: /etc/cron.weekly: Is a directory
+
+root@VM:/home/seed# service --status-all
+ [ + ]  acpid
+ [ - ]  alsa-utils
+ [ - ]  anacron
+ [ + ]  apache-htcacheclean
+ [ + ]  apache2
+ [ + ]  apparmor
+ [ + ]  apport
+ [ + ]  avahi-daemon
+ [ + ]  bind9
+ [ + ]  binfmt-support
+ [ - ]  bluetooth
+ [ - ]  bootmisc.sh
+ [ - ]  brltty
+ [ - ]  checkfs.sh
+ [ - ]  checkroot-bootclean.sh
+ [ - ]  checkroot.sh
+ [ + ]  console-setup
+ [ + ]  cron
+ [ - ]  cups
+ [ + ]  cups-browsed
+ [ + ]  dbus
+ [ - ]  dns-clean
+ [ + ]  grub-common
+ [ - ]  hostname.sh
+ [ - ]  hwclock.sh
+ [ + ]  irqbalance
+ [ - ]  kerneloops
+ [ + ]  keyboard-setup
+ [ - ]  killprocs
+ [ + ]  kmod
+ [ + ]  lightdm
+ [ - ]  mountall-bootclean.sh
+ [ - ]  mountall.sh
+ [ - ]  mountdevsubfs.sh
+ [ - ]  mountkernfs.sh
+ [ - ]  mountnfs-bootclean.sh
+ [ - ]  mountnfs.sh
+ [ + ]  mysql
+ [ + ]  network-manager
+ [ + ]  networking
+ [ + ]  ondemand
+ [ + ]  openbsd-inetd
+ [ + ]  php7.0-fpm
+ [ - ]  plymouth
+ [ - ]  plymouth-log
+ [ - ]  pppd-dns
+ [ + ]  procps
+ [ + ]  rc.local
+ [ + ]  resolvconf
+ [ - ]  rsync
+ [ + ]  rsyslog
+ [ - ]  saned
+ [ - ]  sendsigs
+ [ + ]  speech-dispatcher
+ [ + ]  squid
+ [ + ]  ssh
+ [ - ]  thermald
+ [ + ]  udev
+ [ + ]  ufw
+ [ - ]  umountfs
+ [ - ]  umountnfs.sh
+ [ - ]  umountroot
+ [ - ]  unattended-upgrades
+ [ + ]  urandom
+ [ - ]  uuidd
+ [ + ]  vsftpd
+ [ + ]  whoopsie
+ [ - ]  x11-common
+
+root@VM:/home/seed# lsmod
+Module                  Size  Used by
+vboxsf                 45056  0
+snd_intel8x0           36864  2
+crc32_pclmul           16384  0
+snd_ac97_codec        106496  1 snd_intel8x0
+ac97_bus               16384  1 snd_ac97_codec
+snd_pcm                94208  2 snd_ac97_codec,snd_intel8x0
+aesni_intel            20480  0
+aes_i586               20480  1 aesni_intel
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_rawmidi            28672  1 snd_seq_midi
+lrw                    16384  1 aesni_intel
+snd_seq                57344  2 snd_seq_midi_event,snd_seq_midi
+ablk_helper            16384  1 aesni_intel
+cryptd                 20480  1 ablk_helper
+joydev                 20480  0
+snd_seq_device         16384  3 snd_seq,snd_rawmidi,snd_seq_midi
+input_leds             16384  0
+snd_timer              32768  2 snd_seq,snd_pcm
+serio_raw              16384  0
+snd                    69632  11 snd_seq,snd_ac97_codec,snd_timer,snd_rawmidi,snd_intel8x0,snd_seq_device,snd_pcm
+vboxguest             253952  5 vboxsf
+i2c_piix4              20480  0
+soundcore              16384  1 snd
+mac_hid                16384  0
+binfmt_misc            20480  1
+parport_pc             32768  0
+ppdev                  20480  0
+lp                     20480  0
+parport                49152  3 lp,parport_pc,ppdev
+autofs4                40960  2
+hid_generic            16384  0
+usbhid                 49152  0
+hid                    98304  2 hid_generic,usbhid
+vmwgfx                208896  2
+ttm                    94208  1 vmwgfx
+drm_kms_helper        151552  1 vmwgfx
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+ahci                   36864  2
+psmouse               122880  0
+fjes                   28672  0
+libahci                32768  1 ahci
+e1000                 126976  0
+video                  36864  0
+drm                   311296  5 vmwgfx,ttm,drm_kms_helper
+pata_acpi              16384  0
+
+root@VM:/home/seed# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+messagebus:x:106:110::/var/run/dbus:/bin/false
+uuidd:x:107:111::/run/uuidd:/bin/false
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+whoopsie:x:109:116::/nonexistent:/bin/false
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+saned:x:119:127::/var/lib/saned:/bin/false
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+seed:x:1000:1000:seed,,,:/home/seed:/bin/bash
+vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+telnetd:x:121:129::/nonexistent:/bin/false
+sshd:x:122:65534::/var/run/sshd:/usr/sbin/nologin
+ftp:x:123:130:ftp daemon,,,:/srv/ftp:/bin/false
+bind:x:124:131::/var/cache/bind:/bin/false
+mysql:x:125:132:MySQL Server,,,:/nonexistent:/bin/false
+
+root@VM:/home/seed# cat /etc/shadow
+root:$6$NrF46O1p$.vDnKEtVFC2bXslxkRuT4FcBqPpxLqW05IoECr0XKzEEO5wj8aU3GRHW2BaodUn4K3vgyEjwPspr/kqzAqtcu.:17400:0:99999:7:::
+daemon:*:17212:0:99999:7:::
+bin:*:17212:0:99999:7:::
+sys:*:17212:0:99999:7:::
+sync:*:17212:0:99999:7:::
+games:*:17212:0:99999:7:::
+man:*:17212:0:99999:7:::
+lp:*:17212:0:99999:7:::
+mail:*:17212:0:99999:7:::
+news:*:17212:0:99999:7:::
+uucp:*:17212:0:99999:7:::
+proxy:*:17212:0:99999:7:::
+www-data:*:17212:0:99999:7:::
+backup:*:17212:0:99999:7:::
+list:*:17212:0:99999:7:::
+irc:*:17212:0:99999:7:::
+gnats:*:17212:0:99999:7:::
+nobody:*:17212:0:99999:7:::
+systemd-timesync:*:17212:0:99999:7:::
+systemd-network:*:17212:0:99999:7:::
+systemd-resolve:*:17212:0:99999:7:::
+systemd-bus-proxy:*:17212:0:99999:7:::
+syslog:*:17212:0:99999:7:::
+_apt:*:17212:0:99999:7:::
+messagebus:*:17212:0:99999:7:::
+uuidd:*:17212:0:99999:7:::
+lightdm:*:17212:0:99999:7:::
+whoopsie:*:17212:0:99999:7:::
+avahi-autoipd:*:17212:0:99999:7:::
+avahi:*:17212:0:99999:7:::
+dnsmasq:*:17212:0:99999:7:::
+colord:*:17212:0:99999:7:::
+speech-dispatcher:!:17212:0:99999:7:::
+hplip:*:17212:0:99999:7:::
+kernoops:*:17212:0:99999:7:::
+pulse:*:17212:0:99999:7:::
+rtkit:*:17212:0:99999:7:::
+saned:*:17212:0:99999:7:::
+usbmux:*:17212:0:99999:7:::
+seed:$6$wDRrWCQz$IsBXp9.9wz9SGrF.nbihpoN5w.zQx02sht4cTY8qI7YKh00wN/sfYvDeCAcEo2QYzCfpZoaEVJ8sbCT7hkxXY/:17372:0:99999:7:::
+vboxadd:!:17372::::::
+telnetd:*:17372:0:99999:7:::
+sshd:*:17372:0:99999:7:::
+ftp:*:17372:0:99999:7:::
+bind:*:17372:0:99999:7:::
+mysql:!:17372:0:99999:7:::
+
+root@VM:/home/seed# ifconfig -a
+enp0s3    Link encap:Ethernet  HWaddr 08:00:27:0d:b6:60  
+          inet addr:10.0.2.4  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::3807:7b5:4fe3:1135/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:99 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:239 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:51953 (51.9 KB)  TX bytes:30007 (30.0 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:215 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:215 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:31279 (31.2 KB)  TX bytes:31279 (31.2 KB)
+
+root@VM:/home/seed# netstat -rn
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.2.1        0.0.0.0         UG        0 0          0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U         0 0          0 enp0s3
+169.254.0.0     0.0.0.0         255.255.0.0     U         0 0          0 enp0s3
+
+root@VM:/home/seed# netstat -anp
+var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20343    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     19962    1611/ibus-x11       
+unix  3      [ ]         STREAM     CONNECTED     19846    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20373    1717/indicator-mess 
+unix  3      [ ]         STREAM     CONNECTED     19577    1528/gnome-keyring- 
+unix  3      [ ]         STREAM     CONNECTED     22431    1942/evolution-cale 
+unix  3      [ ]         STREAM     CONNECTED     19017    1266/VBoxClient     
+unix  3      [ ]         STREAM     CONNECTED     22442    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     20395    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     19582    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22418    1886/nautilus       
+unix  3      [ ]         STREAM     CONNECTED     20375    1718/indicator-blue 
+unix  3      [ ]         STREAM     CONNECTED     19959    1608/ibus-ui-gtk3   
+unix  3      [ ]         STREAM     CONNECTED     19945    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19939    1554/bamfdaemon     
+unix  3      [ ]         STREAM     CONNECTED     20414    1726/indicator-keyb 
+unix  3      [ ]         STREAM     CONNECTED     19967    1608/ibus-ui-gtk3   
+unix  3      [ ]         STREAM     CONNECTED     19555    1180/upstart        @/com/ubuntu/upstart-session/1000/1180
+unix  3      [ ]         STREAM     CONNECTED     19850    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  2      [ ]         DGRAM                    17999    984/dnsmasq         
+unix  3      [ ]         STREAM     CONNECTED     19906    1554/bamfdaemon     
+unix  3      [ ]         STREAM     CONNECTED     17923    954/php-fpm.conf)   
+unix  3      [ ]         STREAM     CONNECTED     20407    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20394    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     19956    1621/at-spi-bus-lau 
+unix  3      [ ]         STREAM     CONNECTED     22429    1886/nautilus       
+unix  3      [ ]         STREAM     CONNECTED     20415    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19578    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22419    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     19946    1621/at-spi-bus-lau 
+unix  3      [ ]         STREAM     CONNECTED     20377    1717/indicator-mess 
+unix  2      [ ]         DGRAM                    15028    759/avahi-daemon: r 
+unix  3      [ ]         STREAM     CONNECTED     22438    1942/evolution-cale 
+unix  3      [ ]         STREAM     CONNECTED     20411    1735/indicator-sess 
+unix  3      [ ]         STREAM     CONNECTED     20374    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19963    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19849    1598/gvfsd          
+unix  3      [ ]         STREAM     CONNECTED     15041    760/avahi-daemon: c 
+unix  3      [ ]         STREAM     CONNECTED     19940    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     15016    759/avahi-daemon: r 
+unix  3      [ ]         STREAM     CONNECTED     20307    1582/ibus-daemon    @/tmp/ibus/dbus-qQBCqhW3
+unix  3      [ ]         STREAM     CONNECTED     19960    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20306    1652/hud-service    
+unix  3      [ ]         STREAM     CONNECTED     19935    1605/gvfsd-fuse     
+unix  2      [ ]         DGRAM                    19564    1528/gnome-keyring- 
+unix  3      [ ]         STREAM     CONNECTED     19957    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  2      [ ]         DGRAM                    11764    239/systemd-journal 
+unix  3      [ ]         STREAM     CONNECTED     16200    830/NetworkManager  
+unix  3      [ ]         STREAM     CONNECTED     22443    1582/ibus-daemon    @/tmp/ibus/dbus-qQBCqhW3
+unix  3      [ ]         STREAM     CONNECTED     20342    1652/hud-service    
+unix  3      [ ]         STREAM     CONNECTED     15040    759/avahi-daemon: r 
+unix  3      [ ]         STREAM     CONNECTED     22430    1582/ibus-daemon    @/tmp/ibus/dbus-qQBCqhW3
+unix  3      [ ]         STREAM     CONNECTED     20385    1718/indicator-blue 
+unix  3      [ ]         STREAM     CONNECTED     22432    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20412    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20386    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     19955    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     19936    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     19547    1569/upstart-file-b 
+unix  3      [ ]         STREAM     CONNECTED     19944    1621/at-spi-bus-lau 
+unix  3      [ ]         STREAM     CONNECTED     19528    1567/upstart-dbus-b 
+unix  3      [ ]         STREAM     CONNECTED     20439    1724/indicator-date 
+unix  3      [ ]         STREAM     CONNECTED     20114    1652/hud-service    
+unix  3      [ ]         STREAM     CONNECTED     21106    1727/indicator-soun 
+unix  3      [ ]         STREAM     CONNECTED     19835    1582/ibus-daemon    
+unix  3      [ ]         STREAM     CONNECTED     20454    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20270    1689/upowerd        
+unix  2      [ ]         DGRAM                    26667    2880/sudo           
+unix  3      [ ]         STREAM     CONNECTED     20351    1668/unity-panel-se 
+unix  3      [ ]         STREAM     CONNECTED     20021    1607/ibus-dconf     
+unix  3      [ ]         STREAM     CONNECTED     24579    2507/gvfsd-dnssd    
+unix  3      [ ]         STREAM     CONNECTED     20423    1663/gnome-session- 
+unix  3      [ ]         STREAM     CONNECTED     20020    1611/ibus-x11       
+unix  3      [ ]         STREAM     CONNECTED     20449    1719/indicator-powe 
+unix  3      [ ]         STREAM     CONNECTED     20116    1654/unity-settings 
+unix  3      [ ]         STREAM     CONNECTED     18862    957/Xorg            @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    16368    835/snapd           
+unix  3      [ ]         STREAM     CONNECTED     20670    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20117    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20014    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25626    1886/nautilus       
+unix  3      [ ]         STREAM     CONNECTED     20356    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18713    1155/(logfile-daemo 
+unix  3      [ ]         STREAM     CONNECTED     24583    2507/gvfsd-dnssd    @/dbus-vfs-daemon/socket-y35EtIaz
+unix  3      [ ]         STREAM     CONNECTED     20352    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     20445    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20120    1652/hud-service    
+unix  3      [ ]         STREAM     CONNECTED     20346    1652/hud-service    
+unix  3      [ ]         STREAM     CONNECTED     19640    1554/bamfdaemon     
+unix  3      [ ]         STREAM     CONNECTED     20671    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20088    1654/unity-settings 
+unix  3      [ ]         STREAM     CONNECTED     16170    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  2      [ ]         STREAM     CONNECTED     16156    829/cups-browsed    
+unix  3      [ ]         STREAM     CONNECTED     24580    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20043    1582/ibus-daemon    @/tmp/ibus/dbus-qQBCqhW3
+unix  3      [ ]         STREAM     CONNECTED     19828    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20440    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20424    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20115    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20042    1611/ibus-x11       
+unix  3      [ ]         STREAM     CONNECTED     19332    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20015    1640/at-spi2-regist 
+unix  3      [ ]         STREAM     CONNECTED     24576    2507/gvfsd-dnssd    
+unix  3      [ ]         STREAM     CONNECTED     20444    1730/indicator-prin 
+unix  3      [ ]         STREAM     CONNECTED     20271    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     24582    2479/gvfsd-network  
+unix  3      [ ]         STREAM     CONNECTED     20023    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     19836    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     18712    626/(squid-1)       
+unix  3      [ ]         STREAM     CONNECTED     16169    829/cups-browsed    
+unix  2      [ ]         DGRAM                    25848    2732/dhclient       
+unix  3      [ ]         STREAM     CONNECTED     20355    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     20448    1738/indicator-appl 
+unix  3      [ ]         STREAM     CONNECTED     20121    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     19827    1586/VBoxService    
+unix  3      [ ]         STREAM     CONNECTED     16645    878/sshd            
+unix  3      [ ]         STREAM     CONNECTED     16173    829/cups-browsed    
+unix  3      [ ]         STREAM     CONNECTED     20016    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18861    1237/VBoxClient     
+unix  3      [ ]         STREAM     CONNECTED     16646    1/init              /run/systemd/journal/stdout
+unix  2      [ ]         STREAM     CONNECTED     26664    2880/sudo           
+unix  3      [ ]         STREAM     CONNECTED     20347    1652/hud-service    
+unix  3      [ ]         STREAM     CONNECTED     20022    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18847    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     24577    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20453    1726/indicator-keyb 
+unix  3      [ ]         STREAM     CONNECTED     20089    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     20013    1640/at-spi2-regist 
+unix  3      [ ]         STREAM     CONNECTED     19641    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18846    1225/VBoxClient     
+unix  3      [ ]         STREAM     CONNECTED     22475    2025/gvfsd-trash    @/dbus-vfs-daemon/socket-kHPAl68D
+unix  3      [ ]         STREAM     CONNECTED     17019    902/polkitd         
+unix  3      [ ]         STREAM     CONNECTED     15732    809/dbus-daemon     
+unix  2      [ ]         DGRAM                    14230    623/squid           
+unix  3      [ ]         STREAM     CONNECTED     22330    1969/gvfs-goa-volum 
+unix  3      [ ]         STREAM     CONNECTED     15734    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22389    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22516    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17869    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17020    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22264    1943/evolution-addr 
+unix  3      [ ]         STREAM     CONNECTED     15530    795/accounts-daemon 
+unix  2      [ ]         DGRAM                    16189    830/NetworkManager  
+unix  3      [ ]         STREAM     CONNECTED     15718    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     14620    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22283    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  2      [ ]         DGRAM                    26684    2881/su             
+unix  3      [ ]         STREAM     CONNECTED     22345    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22499    2025/gvfsd-trash    @/dbus-vfs-daemon/socket-Hb6QTlMB
+unix  3      [ ]         STREAM     CONNECTED     15665    1/init              
+unix  3      [ ]         STREAM     CONNECTED     15738    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    15177    771/acpid           
+unix  3      [ ]         STREAM     CONNECTED     14566    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22262    1943/evolution-addr 
+unix  3      [ ]         STREAM     CONNECTED     19001    1258/VBoxClient     
+unix  2      [ ]         DGRAM                    15585    796/ModemManager    
+unix  3      [ ]         STREAM     CONNECTED     22282    1879/nm-applet      
+unix  3      [ ]         STREAM     CONNECTED     22331    1878/gnome-software 
+unix  2      [ ]         DGRAM                    15729    809/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTED     22287    1911/gvfs-udisks2-v 
+unix  3      [ ]         STREAM     CONNECTED     15739    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22515    2034/gvfsd-metadata 
+unix  3      [ ]         STREAM     CONNECTED     19453    1486/dbus-daemon    
+unix  3      [ ]         STREAM     CONNECTED     19002    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22396    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22335    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20006    1629/dbus-daemon    
+unix  2      [ ]         DGRAM                    14631    744/systemd-logind  
+unix  3      [ ]         STREAM     CONNECTED     15740    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22344    1977/gvfs-gphoto2-v 
+unix  3      [ ]         STREAM     CONNECTED     19357    1441/upstart-udev-b 
+unix  3      [ ]         STREAM     CONNECTED     17868    957/Xorg            
+unix  3      [ ]         STREAM     CONNECTED     14565    743/cron            
+unix  3      [ ]         STREAM     CONNECTED     22320    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22265    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     14637    744/systemd-logind  
+unix  3      [ ]         STREAM     CONNECTED     22470    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     15716    809/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTED     22469    2025/gvfsd-trash    
+unix  3      [ ]         STREAM     CONNECTED     19018    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     14619    744/systemd-logind  
+unix  2      [ ]         DGRAM                    22327    902/polkitd         
+unix  3      [ ]         STREAM     CONNECTED     22263    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19360    1180/upstart        @/com/ubuntu/upstart-session/1000/1180
+unix  3      [ ]         STREAM     CONNECTED     22388    1985/gvfs-mtp-volum 
+unix  3      [ ]         STREAM     CONNECTED     17991    984/dnsmasq         
+unix  2      [ ]         DGRAM                    17099    900/named           
+unix  3      [ ]         STREAM     CONNECTED     22498    1886/nautilus       
+unix  3      [ ]         STREAM     CONNECTED     19842    1598/gvfsd          
+unix  3      [ ]         STREAM     CONNECTED     22395    1878/gnome-software 
+unix  3      [ ]         STREAM     CONNECTED     22334    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     22474    1886/nautilus       
+unix  3      [ ]         STREAM     CONNECTED     15733    809/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTED     22288    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     15602    796/ModemManager    
+unix  3      [ ]         STREAM     CONNECTED     22805    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22297    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22100    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22092    1887/polkit-gnome-a 
+unix  3      [ ]         STREAM     CONNECTED     15051    759/avahi-daemon: r 
+unix  3      [ ]         STREAM     CONNECTED     22800    2117/gconfd-2       
+unix  3      [ ]         STREAM     CONNECTED     15231    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22731    2094/zeitgeist-fts  
+unix  3      [ ]         STREAM     CONNECTED     22716    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22084    1878/gnome-software 
+unix  3      [ ]         STREAM     CONNECTED     22697    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22083    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     22096    1879/nm-applet      
+unix  3      [ ]         STREAM     CONNECTED     22804    2117/gconfd-2       
+unix  3      [ ]         STREAM     CONNECTED     22298    1953/gvfs-afc-volum 
+unix  3      [ ]         STREAM     CONNECTED     21090    1730/indicator-prin 
+unix  3      [ ]         STREAM     CONNECTED     22732    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22694    2082/sh             
+unix  3      [ ]         STREAM     CONNECTED     15736    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  2      [ ]         STREAM     CONNECTED     16175    829/cups-browsed    
+unix  2      [ ]         STREAM     CONNECTED     21092    1730/indicator-prin 
+unix  3      [ ]         STREAM     CONNECTED     25627    2479/gvfsd-network  @/dbus-vfs-daemon/socket-PV0ACOqV
+unix  3      [ ]         STREAM     CONNECTED     22702    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22086    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     15845    829/cups-browsed    
+unix  3      [ ]         STREAM     CONNECTED     22801    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22701    2086/zeitgeist-daem 
+unix  3      [ ]         STREAM     CONNECTED     22087    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     15230    773/inetd           
+unix  3      [ ]         STREAM     CONNECTED     15846    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22097    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22696    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22093    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     21091    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16174    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21111    1727/indicator-soun 
+unix  3      [ ]         STREAM     CONNECTED     20154    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20680    1730/indicator-prin 
+unix  3      [ ]         STREAM     CONNECTED     20435    1719/indicator-powe 
+unix  3      [ ]         STREAM     CONNECTED     25424    2660/gnome-pty-help 
+unix  3      [ ]         STREAM     CONNECTED     25395    2647/python         
+unix  3      [ ]         STREAM     CONNECTED     20461    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17922    954/php-fpm.conf)   
+unix  3      [ ]         STREAM     CONNECTED     20128    1654/unity-settings 
+unix  3      [ ]         STREAM     CONNECTED     22688    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     21867    1808/pulseaudio     
+unix  3      [ ]         STREAM     CONNECTED     21820    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24634    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21270    1808/pulseaudio     /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     20779    1738/indicator-appl 
+unix  3      [ ]         STREAM     CONNECTED     20459    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25398    2647/python         
+unix  3      [ ]         STREAM     CONNECTED     20806    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20458    1780/evolution-sour 
+unix  3      [ ]         STREAM     CONNECTED     20149    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     25396    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22687    2075/zeitgeist-data 
+unix  3      [ ]         STREAM     CONNECTED     21927    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20436    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15472    795/accounts-daemon 
+unix  3      [ ]         STREAM     CONNECTED     22615    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     21240    1820/colord         
+unix  3      [ ]         STREAM     CONNECTED     21110    1780/evolution-sour 
+unix  3      [ ]         STREAM     CONNECTED     21105    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     20433    1735/indicator-sess 
+unix  3      [ ]         STREAM     CONNECTED     20153    1663/gnome-session- 
+unix  3      [ ]         STREAM     CONNECTED     15525    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     24600    2479/gvfsd-network  @/dbus-vfs-daemon/socket-vzncbPVQ
+unix  3      [ ]         STREAM     CONNECTED     20460    1780/evolution-sour 
+unix  3      [ ]         STREAM     CONNECTED     17992    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20399    1727/indicator-soun 
+unix  3      [ ]         STREAM     CONNECTED     24633    2515/deja-dup-monit 
+unix  3      [ ]         STREAM     CONNECTED     21112    1808/pulseaudio     /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     20129    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     18153    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22616    2025/gvfsd-trash    @/dbus-vfs-daemon/socket-19f5RQ44
+unix  3      [ ]         STREAM     CONNECTED     21212    1820/colord         
+unix  3      [ ]         STREAM     CONNECTED     21104    1808/pulseaudio     
+unix  3      [ ]         STREAM     CONNECTED     25415    2647/python         
+unix  3      [ ]         STREAM     CONNECTED     21926    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     21817    1871/evolution-cale 
+unix  3      [ ]         STREAM     CONNECTED     21269    1654/unity-settings 
+unix  3      [ ]         STREAM     CONNECTED     20126    1663/gnome-session- 
+unix  3      [ ]         STREAM     CONNECTED     15524    796/ModemManager    
+unix  3      [ ]         STREAM     CONNECTED     20434    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20148    1668/unity-panel-se 
+unix  3      [ ]         STREAM     CONNECTED     18152    923/lightdm         
+unix  3      [ ]         STREAM     CONNECTED     25399    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     21241    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     21216    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25421    1582/ibus-daemon    @/tmp/ibus/dbus-qQBCqhW3
+unix  3      [ ]         STREAM     CONNECTED     20127    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     24630    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     21868    1663/gnome-session- @/tmp/.ICE-unix/1663
+unix  3      [ ]         STREAM     CONNECTED     21117    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     21107    1808/pulseaudio     /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     20400    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     15473    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25423    2647/python         
+unix  3      [ ]         STREAM     CONNECTED     24629    2515/deja-dup-monit 
+unix  3      [ ]         STREAM     CONNECTED     20804    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22944    2174/update-notifie 
+unix  3      [ ]         STREAM     CONNECTED     22401    1995/fwupd          
+unix  3      [ ]         STREAM     CONNECTED     22347    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     15900    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22405    1982/evolution-addr 
+unix  3      [ ]         STREAM     CONNECTED     22308    1878/gnome-software 
+unix  3      [ ]         STREAM     CONNECTED     22305    1887/polkit-gnome-a 
+unix  3      [ ]         STREAM     CONNECTED     21816    1871/evolution-cale 
+unix  3      [ ]         STREAM     CONNECTED     16869    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22517    2034/gvfsd-metadata 
+unix  3      [ ]         STREAM     CONNECTED     18531    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     25414    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     21819    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25413    2647/python         
+unix  3      [ ]         STREAM     CONNECTED     22413    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     19454    1486/dbus-daemon    
+unix  3      [ ]         STREAM     CONNECTED     22952    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     22304    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     18530    1089/lightdm        
+unix  3      [ ]         STREAM     CONNECTED     22406    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22309    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22518    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     22311    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     21828    1808/pulseaudio     
+unix  2      [ ]         DGRAM                    18573    1089/lightdm        
+unix  3      [ ]         STREAM     CONNECTED     22948    1486/dbus-daemon    @/tmp/dbus-5bp7jUxFfN
+unix  3      [ ]         STREAM     CONNECTED     22310    1953/gvfs-afc-volum 
+unix  3      [ ]         STREAM     CONNECTED     21766    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     15898    830/NetworkManager  
+unix  3      [ ]         STREAM     CONNECTED     22951    2174/update-notifie 
+unix  3      [ ]         STREAM     CONNECTED     21765    1713/compiz         
+unix  3      [ ]         STREAM     CONNECTED     18673    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     25403    1629/dbus-daemon    @/tmp/dbus-rAtOgZKSDv
+unix  3      [ ]         STREAM     CONNECTED     22414    1886/nautilus       
+unix  3      [ ]         STREAM     CONNECTED     22346    1977/gvfs-gphoto2-v 
+unix  3      [ ]         STREAM     CONNECTED     22415    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22303    1943/evolution-addr 
+unix  3      [ ]         STREAM     CONNECTED     22411    1982/evolution-addr 
+unix  3      [ ]         STREAM     CONNECTED     25402    2647/python         
+unix  3      [ ]         STREAM     CONNECTED     22306    809/dbus-daemon     /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     22099    1877/unity-fallback 
+unix  3      [ ]         STREAM     CONNECTED     18669    1142/systemd        
+unix  3      [ ]         STREAM     CONNECTED     16868    900/named           
+unix  3      [ ]         STREAM     CONNECTED     22947    2174/update-notifie 
+unix  3      [ ]         STREAM     CONNECTED     22403    1/init              /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     21829    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22945    957/Xorg            @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     22078    957/Xorg            @/tmp/.X11-unix/X0
+
+root@VM:/home/seed# arp -a
+? (10.0.2.3) at 08:00:27:73:2a:03 [ether] on enp0s3
+? (10.0.2.1) at 52:54:00:12:35:00 [ether] on enp0s3
+
+root@VM:/home/seed# lsof
+r/lib/i386-linux-gnu/libXext.so.6.4.0
+dconf\x20 2647 2652       seed  mem       REG        8,1     9556       5751 /usr/lib/i386-linux-gnu/libXdamage.so.1.1.0
+dconf\x20 2647 2652       seed  mem       REG        8,1     9548       5747 /usr/lib/i386-linux-gnu/libXcomposite.so.1.0.0
+dconf\x20 2647 2652       seed  mem       REG        8,1    38384       5749 /usr/lib/i386-linux-gnu/libXcursor.so.1.0.2
+dconf\x20 2647 2652       seed  mem       REG        8,1    46584       5773 /usr/lib/i386-linux-gnu/libXrandr.so.2.2.0
+dconf\x20 2647 2652       seed  mem       REG        8,1    71288       5763 /usr/lib/i386-linux-gnu/libXi.so.6.1.0
+dconf\x20 2647 2652       seed  mem       REG        8,1     9636       5765 /usr/lib/i386-linux-gnu/libXinerama.so.1.0.0
+dconf\x20 2647 2652       seed  mem       REG        8,1    42700       5775 /usr/lib/i386-linux-gnu/libXrender.so.1.3.0
+dconf\x20 2647 2652       seed  mem       REG        8,1   293176       6141 /usr/lib/i386-linux-gnu/libfontconfig.so.1.9.0
+dconf\x20 2647 2652       seed  mem       REG        8,1    92452       6691 /usr/lib/i386-linux-gnu/libpangoft2-1.0.so.0.3800.1
+dconf\x20 2647 2652       seed  mem       REG        8,1   153420       5846 /usr/lib/i386-linux-gnu/libatk-1.0.so.0.21809.1
+dconf\x20 2647 2652       seed  mem       REG        8,1    21864       5757 /usr/lib/i386-linux-gnu/libXfixes.so.3.1.0
+dconf\x20 2647 2652       seed  mem       REG        8,1  1348416       5738 /usr/lib/i386-linux-gnu/libX11.so.6.3.0
+dconf\x20 2647 2652       seed  mem       REG        8,1    51208       6689 /usr/lib/i386-linux-gnu/libpangocairo-1.0.so.0.3800.1
+dconf\x20 2647 2652       seed  mem       REG        8,1    13816       6258 /usr/lib/i386-linux-gnu/libgmodule-2.0.so.0.4800.2
+dconf\x20 2647 2652       seed  mem       REG        8,1   325604       6687 /usr/lib/i386-linux-gnu/libpango-1.0.so.0.3800.1
+dconf\x20 2647 2652       seed  mem       REG        8,1  1865020       6244 /usr/lib/i386-linux-gnu/libgio-2.0.so.0.4800.2
+dconf\x20 2647 2652       seed  mem       REG        8,1   161860       6216 /usr/lib/i386-linux-gnu/libgdk_pixbuf-2.0.so.0.3200.2
+dconf\x20 2647 2652       seed  mem       REG        8,1  1305684       5903 /usr/lib/i386-linux-gnu/libcairo.so.2.11400.6
+dconf\x20 2647 2652       seed  mem       REG        8,1   782408       6214 /usr/lib/i386-linux-gnu/libgdk-x11-2.0.so.0.2400.30
+dconf\x20 2647 2652       seed  mem       REG        8,1  5190336       6359 /usr/lib/i386-linux-gnu/libgtk-x11-2.0.so.0.2400.30
+dconf\x20 2647 2652       seed  mem       REG        8,1  2786172     411986 /usr/lib/python2.7/dist-packages/gtk-2.0/gtk/_gtk.so
+dconf\x20 2647 2652       seed  mem       REG        8,1    30264       6127 /usr/lib/i386-linux-gnu/libffi.so.6.0.4
+dconf\x20 2647 2652       seed  mem       REG        8,1   382856       6282 /usr/lib/i386-linux-gnu/libgobject-2.0.so.0.4800.2
+dconf\x20 2647 2652       seed  mem       REG        8,1   159256     411942 /usr/lib/python2.7/dist-packages/gobject/_gobject.i386-linux-gnu.so
+dconf\x20 2647 2652       seed  mem       REG        8,1   472368     656998 /lib/i386-linux-gnu/libpcre.so.3.13.2
+dconf\x20 2647 2652       seed  mem       REG        8,1    17932       3904 /usr/lib/i386-linux-gnu/libpyglib-2.0-python2.7.so.0.0.0
+dconf\x20 2647 2652       seed  mem       REG        8,1  1211332     656913 /lib/i386-linux-gnu/libglib-2.0.so.0.4800.2
+dconf\x20 2647 2652       seed  mem       REG        8,1    17984       5911 /usr/lib/i386-linux-gnu/libcanberra-gtk.so.0.1.9
+dconf\x20 2647 2652       seed  mem       REG        8,1     5500     135014 /usr/lib/i386-linux-gnu/gtk-2.0/modules/libatk-bridge.so
+dconf\x20 2647 2652       seed  mem       REG        8,1    18884     411984 /usr/lib/python2.7/dist-packages/gtk-2.0/pangocairo.so
+dconf\x20 2647 2652       seed  mem       REG        8,1    28072     411935 /usr/lib/python2.7/dist-packages/gtk-2.0/gio/unix.i386-linux-gnu.so
+dconf\x20 2647 2652       seed  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+dconf\x20 2647 2652       seed  mem       REG        8,1   341948     656941 /lib/i386-linux-gnu/libm-2.23.so
+dconf\x20 2647 2652       seed  mem       REG        8,1   104020     667684 /lib/i386-linux-gnu/libz.so.1.2.8
+dconf\x20 2647 2652       seed  mem       REG        8,1     9804     657050 /lib/i386-linux-gnu/libutil-2.23.so
+dconf\x20 2647 2652       seed  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+dconf\x20 2647 2652       seed  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+dconf\x20 2647 2652       seed  mem       REG        8,1   134864     657015 /lib/i386-linux-gnu/libpthread-2.23.so
+dconf\x20 2647 2652       seed  mem       REG        8,1     5488       6355 /usr/lib/i386-linux-gnu/libgthread-2.0.so.0.4800.2
+dconf\x20 2647 2652       seed  mem       REG        8,1    72088     411945 /usr/lib/python2.7/dist-packages/glib/_glib.i386-linux-gnu.so
+dconf\x20 2647 2652       seed  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+dconf\x20 2647 2652       seed    0r      CHR        1,3      0t0          6 /dev/null
+dconf\x20 2647 2652       seed    1u      CHR      136,2      0t0          5 /dev/pts/2
+dconf\x20 2647 2652       seed    2u      CHR      136,2      0t0          5 /dev/pts/2
+dconf\x20 2647 2652       seed    3u     unix 0xddcffb00      0t0      25413 type=STREAM
+dconf\x20 2647 2652       seed    4u     unix 0xe9193200      0t0      25395 type=STREAM
+dconf\x20 2647 2652       seed    5u  a_inode       0,11        0       9041 [eventfd]
+dconf\x20 2647 2652       seed    6u  a_inode       0,11        0       9041 [eventfd]
+dconf\x20 2647 2652       seed    7u     unix 0xe9193800      0t0      25398 type=STREAM
+dconf\x20 2647 2652       seed    8u  a_inode       0,11        0       9041 [eventfd]
+dconf\x20 2647 2652       seed    9u  a_inode       0,11        0       9041 [eventfd]
+dconf\x20 2647 2652       seed   10u     unix 0xddcfe900      0t0      25402 type=STREAM
+dconf\x20 2647 2652       seed   11r  a_inode       0,11        0       9041 inotify
+dconf\x20 2647 2652       seed   12u  a_inode       0,11        0       9041 [eventfd]
+dconf\x20 2647 2652       seed   13r      CHR        1,9      0t0         11 /dev/urandom
+dconf\x20 2647 2652       seed   14u      CHR        5,2      0t0         86 /dev/ptmx
+dconf\x20 2647 2652       seed   15u  a_inode       0,11        0       9041 [eventfd]
+dconf\x20 2647 2652       seed   16r     FIFO       0,10      0t0      25410 pipe
+dconf\x20 2647 2652       seed   17r      CHR        1,9      0t0         11 /dev/urandom
+dconf\x20 2647 2652       seed   18w     FIFO       0,10      0t0      25410 pipe
+dconf\x20 2647 2652       seed   19u     unix 0xd0da2f00      0t0      25420 type=STREAM
+dconf\x20 2647 2652       seed   20u     unix 0xe9192600      0t0      25415 type=STREAM
+dconf\x20 2647 2652       seed   21u      CHR      136,1      0t0          4 /dev/pts/1
+dconf\x20 2647 2652       seed   22u     unix 0xddf0f200      0t0      25423 type=STREAM
+dconf\x20 2647 2652       seed   23r     FIFO       0,10      0t0      25468 pipe
+dconf\x20 2647 2652       seed   24w     FIFO       0,10      0t0      25468 pipe
+gnome-pty 2660            seed  cwd       DIR        8,1     4096          2 /
+gnome-pty 2660            seed  rtd       DIR        8,1     4096          2 /
+gnome-pty 2660            seed  txt       REG        8,1    14048     277414 /usr/lib/libvte9/gnome-pty-helper
+gnome-pty 2660            seed  mem       REG        8,1    46712     656968 /lib/i386-linux-gnu/libnss_files-2.23.so
+gnome-pty 2660            seed  mem       REG        8,1    46744     656978 /lib/i386-linux-gnu/libnss_nis-2.23.so
+gnome-pty 2660            seed  mem       REG        8,1    96096     656962 /lib/i386-linux-gnu/libnsl-2.23.so
+gnome-pty 2660            seed  mem       REG        8,1    34620     656964 /lib/i386-linux-gnu/libnss_compat-2.23.so
+gnome-pty 2660            seed  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+gnome-pty 2660            seed  mem       REG        8,1     9804     657050 /lib/i386-linux-gnu/libutil-2.23.so
+gnome-pty 2660            seed  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+gnome-pty 2660            seed    0u     unix 0xddf0ef00      0t0      25424 type=STREAM
+gnome-pty 2660            seed    1u     unix 0xddf0ef00      0t0      25424 type=STREAM
+gnome-pty 2660            seed    2r      CHR        1,3      0t0          6 /dev/null
+bash      2661            seed  cwd       DIR        8,1     4096    1059305 /home/seed
+bash      2661            seed  rtd       DIR        8,1     4096          2 /
+bash      2661            seed  txt       REG        8,1  1109564     262153 /bin/bash
+bash      2661            seed  mem       REG        8,1    46712     656968 /lib/i386-linux-gnu/libnss_files-2.23.so
+bash      2661            seed  mem       REG        8,1    46744     656978 /lib/i386-linux-gnu/libnss_nis-2.23.so
+bash      2661            seed  mem       REG        8,1    96096     656962 /lib/i386-linux-gnu/libnsl-2.23.so
+bash      2661            seed  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+bash      2661            seed  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+bash      2661            seed  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+bash      2661            seed  mem       REG        8,1   137392     657041 /lib/i386-linux-gnu/libtinfo.so.5.9
+bash      2661            seed  mem       REG        8,1    26256       7656 /usr/lib/i386-linux-gnu/gconv/gconv-modules.cache
+bash      2661            seed  mem       REG        8,1    34620     656964 /lib/i386-linux-gnu/libnss_compat-2.23.so
+bash      2661            seed  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+bash      2661            seed    0u      CHR      136,1      0t0          4 /dev/pts/1
+bash      2661            seed    1u      CHR      136,1      0t0          4 /dev/pts/1
+bash      2661            seed    2u      CHR      136,1      0t0          4 /dev/pts/1
+bash      2661            seed  255u      CHR      136,1      0t0          4 /dev/pts/1
+dhclient  2732            root  cwd       DIR        8,1     4096          2 /
+dhclient  2732            root  rtd       DIR        8,1     4096          2 /
+dhclient  2732            root  txt       REG        8,1   564644     134063 /sbin/dhclient
+dhclient  2732            root  mem       REG        8,1    46712     656968 /lib/i386-linux-gnu/libnss_files-2.23.so
+dhclient  2732            root  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+dhclient  2732            root  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+dhclient  2732            root  mem       REG        8,1   457180     656927 /lib/i386-linux-gnu/libisc-export.so.160.0.0
+dhclient  2732            root  mem       REG        8,1  2275536     656898 /lib/i386-linux-gnu/libdns-export.so.162.1.3
+dhclient  2732            root  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+dhclient  2732            root    0r      CHR        1,3      0t0          6 /dev/null
+dhclient  2732            root    1w      CHR        1,3      0t0          6 /dev/null
+dhclient  2732            root    2w      CHR        1,3      0t0          6 /dev/null
+dhclient  2732            root    3u     unix 0xf3860300      0t0      25848 type=DGRAM
+dhclient  2732            root    4w      REG        8,1     2984     966831 /var/lib/NetworkManager/dhclient-da36a4c0-baa4-3cb0-9425-4a6733214dcd-enp0s3.lease
+dhclient  2732            root    5u     pack      25860      0t0        ALL type=SOCK_RAW
+dhclient  2732            root    6u     IPv4      25861      0t0        UDP *:bootpc 
+sudo      2880            root  cwd       DIR        8,1     4096    1059305 /home/seed
+sudo      2880            root  rtd       DIR        8,1     4096          2 /
+sudo      2880            root  txt       REG        8,1   159852       1472 /usr/bin/sudo
+sudo      2880            root  mem       REG        8,1   114560     656909 /lib/i386-linux-gnu/libgcc_s.so.1
+sudo      2880            root  mem       REG        8,1    30660     657023 /lib/i386-linux-gnu/librt-2.23.so
+sudo      2880            root  mem       REG        8,1   285116     657099 /lib/i386-linux-gnu/security/pam_systemd.so
+sudo      2880            root  mem       REG        8,1    38428     656881 /lib/i386-linux-gnu/libcrypt-2.23.so
+sudo      2880            root  mem       REG        8,1    63308     657106 /lib/i386-linux-gnu/security/pam_unix.so
+sudo      2880            root  mem       REG        8,1    59064     656985 /lib/i386-linux-gnu/libpam.so.0.83.1
+sudo      2880            root  mem       REG        8,1   357900       9016 /usr/lib/sudo/sudoers.so
+sudo      2880            root  mem       REG        8,1    46712     656968 /lib/i386-linux-gnu/libnss_files-2.23.so
+sudo      2880            root  mem       REG        8,1    46744     656978 /lib/i386-linux-gnu/libnss_nis-2.23.so
+sudo      2880            root  mem       REG        8,1    96096     656962 /lib/i386-linux-gnu/libnsl-2.23.so
+sudo      2880            root  mem       REG        8,1    13840     656987 /lib/i386-linux-gnu/libpam_misc.so.0.82.0
+sudo      2880            root  mem       REG        8,1    46764     657075 /lib/i386-linux-gnu/security/pam_gnome_keyring.so
+sudo      2880            root  mem       REG        8,1     9672     657105 /lib/i386-linux-gnu/security/pam_umask.so
+sudo      2880            root  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+sudo      2880            root  mem       REG        8,1   134864     657015 /lib/i386-linux-gnu/libpthread-2.23.so
+sudo      2880            root  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+sudo      2880            root  mem       REG        8,1   472368     656998 /lib/i386-linux-gnu/libpcre.so.3.13.2
+sudo      2880            root  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+sudo      2880            root  mem       REG        8,1    91712       9011 /usr/lib/sudo/libsudo_util.so.0.0.0
+sudo      2880            root  mem       REG        8,1     9804     657050 /lib/i386-linux-gnu/libutil-2.23.so
+sudo      2880            root  mem       REG        8,1   145384     657027 /lib/i386-linux-gnu/libselinux.so.1
+sudo      2880            root  mem       REG        8,1   116360     656861 /lib/i386-linux-gnu/libaudit.so.1.0.0
+sudo      2880            root  mem       REG        8,1     5492     657089 /lib/i386-linux-gnu/security/pam_permit.so
+sudo      2880            root  mem       REG        8,1     5384     657067 /lib/i386-linux-gnu/security/pam_deny.so
+sudo      2880            root  mem       REG        8,1    13760     657069 /lib/i386-linux-gnu/security/pam_env.so
+sudo      2880            root  mem       REG        8,1    34620     656964 /lib/i386-linux-gnu/libnss_compat-2.23.so
+sudo      2880            root  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+sudo      2880            root    0u      CHR      136,1      0t0          4 /dev/pts/1
+sudo      2880            root    1u      CHR      136,1      0t0          4 /dev/pts/1
+sudo      2880            root    2u      CHR      136,1      0t0          4 /dev/pts/1
+sudo      2880            root    3u     unix 0xd0f65b00      0t0      26664 type=STREAM
+sudo      2880            root    5u  netlink                 0t0      26661 AUDIT
+sudo      2880            root    6r     FIFO       0,10      0t0      26652 pipe
+sudo      2880            root    7w     FIFO       0,10      0t0      26652 pipe
+sudo      2880            root    8u     unix 0xd0f64300      0t0      26667 type=DGRAM
+su        2881            root  cwd       DIR        8,1     4096    1059305 /home/seed
+su        2881            root  rtd       DIR        8,1     4096          2 /
+su        2881            root  txt       REG        8,1    38900     262301 /bin/su
+su        2881            root  mem       REG        8,1   114560     656909 /lib/i386-linux-gnu/libgcc_s.so.1
+su        2881            root  mem       REG        8,1    30660     657023 /lib/i386-linux-gnu/librt-2.23.so
+su        2881            root  mem       REG        8,1   285116     657099 /lib/i386-linux-gnu/security/pam_systemd.so
+su        2881            root  mem       REG        8,1    38428     656881 /lib/i386-linux-gnu/libcrypt-2.23.so
+su        2881            root  mem       REG        8,1    26256       7656 /usr/lib/i386-linux-gnu/gconv/gconv-modules.cache
+su        2881            root  mem       REG        8,1    46764     657075 /lib/i386-linux-gnu/security/pam_gnome_keyring.so
+su        2881            root  mem       REG        8,1    63308     657106 /lib/i386-linux-gnu/security/pam_unix.so
+su        2881            root  mem       REG        8,1   134864     657015 /lib/i386-linux-gnu/libpthread-2.23.so
+su        2881            root  mem       REG        8,1   472368     656998 /lib/i386-linux-gnu/libpcre.so.3.13.2
+su        2881            root  mem       REG        8,1   145384     657027 /lib/i386-linux-gnu/libselinux.so.1
+su        2881            root  mem       REG        8,1    46712     656968 /lib/i386-linux-gnu/libnss_files-2.23.so
+su        2881            root  mem       REG        8,1    46744     656978 /lib/i386-linux-gnu/libnss_nis-2.23.so
+su        2881            root  mem       REG        8,1    96096     656962 /lib/i386-linux-gnu/libnsl-2.23.so
+su        2881            root  mem       REG        8,1     9672     657105 /lib/i386-linux-gnu/security/pam_umask.so
+su        2881            root  mem       REG        8,1     5492     657089 /lib/i386-linux-gnu/security/pam_permit.so
+su        2881            root  mem       REG        8,1     5384     657067 /lib/i386-linux-gnu/security/pam_deny.so
+su        2881            root  mem       REG        8,1    22084     657080 /lib/i386-linux-gnu/security/pam_limits.so
+su        2881            root  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+su        2881            root  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+su        2881            root  mem       REG        8,1   116360     656861 /lib/i386-linux-gnu/libaudit.so.1.0.0
+su        2881            root  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+su        2881            root  mem       REG        8,1    13840     656987 /lib/i386-linux-gnu/libpam_misc.so.0.82.0
+su        2881            root  mem       REG        8,1    59064     656985 /lib/i386-linux-gnu/libpam.so.0.83.1
+su        2881            root  mem       REG        8,1     9644     657084 /lib/i386-linux-gnu/security/pam_mail.so
+su        2881            root  mem       REG        8,1    13760     657069 /lib/i386-linux-gnu/security/pam_env.so
+su        2881            root  mem       REG        8,1     5544     657092 /lib/i386-linux-gnu/security/pam_rootok.so
+su        2881            root  mem       REG        8,1    34620     656964 /lib/i386-linux-gnu/libnss_compat-2.23.so
+su        2881            root  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+su        2881            root    0u      CHR      136,1      0t0          4 /dev/pts/1
+su        2881            root    1u      CHR      136,1      0t0          4 /dev/pts/1
+su        2881            root    2u      CHR      136,1      0t0          4 /dev/pts/1
+su        2881            root    3u     unix 0xf54f3200      0t0      26684 type=DGRAM
+bash      2882            root  cwd       DIR        8,1     4096    1059305 /home/seed
+bash      2882            root  rtd       DIR        8,1     4096          2 /
+bash      2882            root  txt       REG        8,1  1109564     262153 /bin/bash
+bash      2882            root  mem       REG        8,1    46712     656968 /lib/i386-linux-gnu/libnss_files-2.23.so
+bash      2882            root  mem       REG        8,1    46744     656978 /lib/i386-linux-gnu/libnss_nis-2.23.so
+bash      2882            root  mem       REG        8,1    96096     656962 /lib/i386-linux-gnu/libnsl-2.23.so
+bash      2882            root  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+bash      2882            root  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+bash      2882            root  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+bash      2882            root  mem       REG        8,1   137392     657041 /lib/i386-linux-gnu/libtinfo.so.5.9
+bash      2882            root  mem       REG        8,1    26256       7656 /usr/lib/i386-linux-gnu/gconv/gconv-modules.cache
+bash      2882            root  mem       REG        8,1    34620     656964 /lib/i386-linux-gnu/libnss_compat-2.23.so
+bash      2882            root  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+bash      2882            root    0u      CHR      136,1      0t0          4 /dev/pts/1
+bash      2882            root    1u      CHR      136,1      0t0          4 /dev/pts/1
+bash      2882            root    2u      CHR      136,1      0t0          4 /dev/pts/1
+bash      2882            root  255u      CHR      136,1      0t0          4 /dev/pts/1
+kworker/0 2941            root  cwd       DIR        8,1     4096          2 /
+kworker/0 2941            root  rtd       DIR        8,1     4096          2 /
+kworker/0 2941            root  txt   unknown                                /proc/2941/exe
+kworker/u 3011            root  cwd       DIR        8,1     4096          2 /
+kworker/u 3011            root  rtd       DIR        8,1     4096          2 /
+kworker/u 3011            root  txt   unknown                                /proc/3011/exe
+kworker/0 3049            root  cwd       DIR        8,1     4096          2 /
+kworker/0 3049            root  rtd       DIR        8,1     4096          2 /
+kworker/0 3049            root  txt   unknown                                /proc/3049/exe
+kworker/u 3072            root  cwd       DIR        8,1     4096          2 /
+kworker/u 3072            root  rtd       DIR        8,1     4096          2 /
+kworker/u 3072            root  txt   unknown                                /proc/3072/exe
+kworker/0 3802            root  cwd       DIR        8,1     4096          2 /
+kworker/0 3802            root  rtd       DIR        8,1     4096          2 /
+kworker/0 3802            root  txt   unknown                                /proc/3802/exe
+lsof      3806            root  cwd       DIR        8,1     4096    1059305 /home/seed
+lsof      3806            root  rtd       DIR        8,1     4096          2 /
+lsof      3806            root  txt       REG        8,1   186464        804 /usr/bin/lsof
+lsof      3806            root  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+lsof      3806            root  mem       REG        8,1   341948     656941 /lib/i386-linux-gnu/libm-2.23.so
+lsof      3806            root  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+lsof      3806            root  mem       REG        8,1   472368     656998 /lib/i386-linux-gnu/libpcre.so.3.13.2
+lsof      3806            root  mem       REG        8,1   134864     657015 /lib/i386-linux-gnu/libpthread-2.23.so
+lsof      3806            root  mem       REG        8,1   114560     656909 /lib/i386-linux-gnu/libgcc_s.so.1
+lsof      3806            root  mem       REG        8,1  1521032       6897 /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21
+lsof      3806            root  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+lsof      3806            root  mem       REG        8,1   145384     657027 /lib/i386-linux-gnu/libselinux.so.1
+lsof      3806            root  mem       REG        8,1    26256       7656 /usr/lib/i386-linux-gnu/gconv/gconv-modules.cache
+lsof      3806            root  mem       REG        8,1    20188     160707 /home/seed/lib/boost/libboost_system.so.1.64.0
+lsof      3806            root  mem       REG        8,1   131156     160650 /home/seed/lib/boost/libboost_filesystem.so.1.64.0
+lsof      3806            root  mem       REG        8,1   630340     160689 /home/seed/lib/boost/libboost_program_options.so.1.64.0
+lsof      3806            root  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+lsof      3806            root    0u      CHR      136,1      0t0          4 /dev/pts/1
+lsof      3806            root    1u      CHR      136,1      0t0          4 /dev/pts/1
+lsof      3806            root    2u      CHR      136,1      0t0          4 /dev/pts/1
+lsof      3806            root    3r      DIR        0,4        0          1 /proc
+lsof      3806            root    4r      DIR        0,4        0      31875 /proc/3806/fd
+lsof      3806            root    5w     FIFO       0,10      0t0      31880 pipe
+lsof      3806            root    6r     FIFO       0,10      0t0      31881 pipe
+lsof      3807            root  cwd       DIR        8,1     4096    1059305 /home/seed
+lsof      3807            root  rtd       DIR        8,1     4096          2 /
+lsof      3807            root  txt       REG        8,1   186464        804 /usr/bin/lsof
+lsof      3807            root  mem       REG        8,1 10219008       8535 /usr/lib/locale/locale-archive
+lsof      3807            root  mem       REG        8,1   341948     656941 /lib/i386-linux-gnu/libm-2.23.so
+lsof      3807            root  mem       REG        8,1    13828     656895 /lib/i386-linux-gnu/libdl-2.23.so
+lsof      3807            root  mem       REG        8,1   472368     656998 /lib/i386-linux-gnu/libpcre.so.3.13.2
+lsof      3807            root  mem       REG        8,1   134864     657015 /lib/i386-linux-gnu/libpthread-2.23.so
+lsof      3807            root  mem       REG        8,1   114560     656909 /lib/i386-linux-gnu/libgcc_s.so.1
+lsof      3807            root  mem       REG        8,1  1521032       6897 /usr/lib/i386-linux-gnu/libstdc++.so.6.0.21
+lsof      3807            root  mem       REG        8,1  1786484     656871 /lib/i386-linux-gnu/libc-2.23.so
+lsof      3807            root  mem       REG        8,1   145384     657027 /lib/i386-linux-gnu/libselinux.so.1
+lsof      3807            root  mem       REG        8,1    20188     160707 /home/seed/lib/boost/libboost_system.so.1.64.0
+lsof      3807            root  mem       REG        8,1   131156     160650 /home/seed/lib/boost/libboost_filesystem.so.1.64.0
+lsof      3807            root  mem       REG        8,1   630340     160689 /home/seed/lib/boost/libboost_program_options.so.1.64.0
+lsof      3807            root  mem       REG        8,1   147688     656843 /lib/i386-linux-gnu/ld-2.23.so
+lsof      3807            root    4r     FIFO       0,10      0t0      31880 pipe
+lsof      3807            root    7w     FIFO       0,10      0t0      31881 pipe
+
+root@VM:/home/seed# ps auxwwem
+=dbus PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin GNOME_DESKTOP_SESSION_ID=this-is-deprecated GTK_MODULES=gail:atk-bridge:unity-gtk-module GTK_IM_MODULE=ibus GDMSESSION=ubuntu XDG_VTNR=7 XDG_SESSION_ID=c1 GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 XDG_SEAT=seat0 COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path LANG=en_US.UTF-8 LOGNAME=seed LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SESSIONTYPE=gnome-session J2REDIR=/usr/lib/jvm/java-8-oracle/jre DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_CURRENT_DESKTOP=Unity DESKTOP_SESSION=ubuntu DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 GNOME_KEYRING_PID= QT_QPA_PLATFORMTHEME=appmenu-qt5 GDM_LANG=en_US UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+seed         -  0.0    -      -     - -        S    01:54   0:00 -
+seed      2086  0.0  0.4  51588  5056 ?        -    01:54   0:00 /usr/bin/zeitgeist-daemon GNOME_KEYRING_PID= USER=seed UPSTART_INSTANCE= LANGUAGE=en_US J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT=seat0 XDG_SESSION_TYPE=x11 COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx SHLVL=0 LIBGL_ALWAYS_SOFTWARE=1 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: J2REDIR=/usr/lib/jvm/java-8-oracle/jre QT4_IM_MODULE=xim HOME=/home/seed DESKTOP_SESSION=ubuntu GTK_MODULES=gail:atk-bridge:unity-gtk-module QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 INSTANCE= DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 DBUS_STARTER_BUS_TYPE=session GNOME_KEYRING_CONTROL= IM_CONFIG_PHASE=1 UPSTART_JOB=dbus MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path SESSIONTYPE=gnome-session QT_QPA_PLATFORMTHEME=appmenu-qt5 GTK_IM_MODULE=ibus LOGNAME=seed DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path DBUS_DEBUG_OUTPUT=1 XDG_SESSION_ID=c1 GNOME_DESKTOP_SESSION_ID=this-is-deprecated GTK2_MODULES=overlay-scrollbar PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin SESSION_MANAGER=local/VM:@/tmp/.ICE-unix/1663,unix/VM:/tmp/.ICE-unix/1663 DERBY_HOME=/usr/lib/jvm/java-8-oracle/db GDM_LANG=en_US XDG_RUNTIME_DIR=/run/user/1000 XDG_MENU_PREFIX=gnome- XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 DISPLAY=:0 LANG=en_US.UTF-8 XDG_CURRENT_DESKTOP=Unity XMODIFIERS=@im XAUTHORITY=/home/seed/.Xauthority XDG_SESSION_DESKTOP=ubuntu XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed SSH_AUTH_SOCK=/run/user/1000/keyring/ssh SHELL=/bin/bash QT_ACCESSIBILITY=1 GDMSESSION=ubuntu UPSTART_EVENTS=starting GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 QT_IM_MODULE=ibus XDG_VTNR=7 JAVA_HOME=/usr/lib/jvm/java-8-oracle PWD=/ XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 CLUTTER_IM_MODULE=xim XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg JOB=xsession-init
+seed         -  0.0    -      -     - -        Sl   01:54   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:54   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:54   0:00 -
+seed      2094  0.0  0.7  68928  7564 ?        -    01:54   0:00 /usr/lib/i386-linux-gnu/zeitgeist-fts XDG_RUNTIME_DIR=/run/user/1000 SESSION_MANAGER=local/VM:@/tmp/.ICE-unix/1663,unix/VM:/tmp/.ICE-unix/1663 XMODIFIERS=@im XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed XDG_SESSION_TYPE=x11 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 QT_IM_MODULE=ibus USER=seed XAUTHORITY=/home/seed/.Xauthority DBUS_STARTER_BUS_TYPE=session SHLVL=0 UPSTART_INSTANCE= XDG_MENU_PREFIX=gnome- GNOME_KEYRING_CONTROL= XDG_SESSION_DESKTOP=ubuntu DBUS_DEBUG_OUTPUT=1 SHELL=/bin/bash ZEITGEIST_DATA_PATH=/home/seed/.local/share/zeitgeist UPSTART_EVENTS=starting QT_ACCESSIBILITY=1 INSTANCE= XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop LANGUAGE=en_US QT4_IM_MODULE=xim IM_CONFIG_PHASE=1 JAVA_HOME=/usr/lib/jvm/java-8-oracle GTK2_MODULES=overlay-scrollbar JOB=xsession-init PWD=/home/seed HOME=/home/seed DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 CLUTTER_IM_MODULE=xim LIBGL_ALWAYS_SOFTWARE=1 DISPLAY=:0 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh UPSTART_JOB=dbus PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin GNOME_DESKTOP_SESSION_ID=this-is-deprecated GTK_MODULES=gail:atk-bridge:unity-gtk-module GTK_IM_MODULE=ibus GDMSESSION=ubuntu XDG_VTNR=7 XDG_SESSION_ID=c1 GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 XDG_SEAT=seat0 COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path LANG=en_US.UTF-8 LOGNAME=seed LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SESSIONTYPE=gnome-session J2REDIR=/usr/lib/jvm/java-8-oracle/jre DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_CURRENT_DESKTOP=Unity DESKTOP_SESSION=ubuntu DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 GNOME_KEYRING_PID= QT_QPA_PLATFORMTHEME=appmenu-qt5 GDM_LANG=en_US UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+seed         -  0.0    -      -     - -        Sl   01:54   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:54   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:54   0:00 -
+seed      2117  0.0  0.4  11616  4820 ?        -    01:54   0:00 /usr/lib/i386-linux-gnu/gconf/gconfd-2 XDG_RUNTIME_DIR=/run/user/1000 SESSION_MANAGER=local/VM:@/tmp/.ICE-unix/1663,unix/VM:/tmp/.ICE-unix/1663 XMODIFIERS=@im XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed XDG_SESSION_TYPE=x11 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 QT_IM_MODULE=ibus USER=seed XAUTHORITY=/home/seed/.Xauthority DBUS_STARTER_BUS_TYPE=session SHLVL=0 UPSTART_INSTANCE= XDG_MENU_PREFIX=gnome- GNOME_KEYRING_CONTROL= XDG_SESSION_DESKTOP=ubuntu DBUS_DEBUG_OUTPUT=1 SHELL=/bin/bash ZEITGEIST_DATA_PATH=/home/seed/.local/share/zeitgeist UPSTART_EVENTS=starting QT_ACCESSIBILITY=1 INSTANCE= XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop LANGUAGE=en_US QT4_IM_MODULE=xim IM_CONFIG_PHASE=1 JAVA_HOME=/usr/lib/jvm/java-8-oracle GTK2_MODULES=overlay-scrollbar JOB=xsession-init PWD=/home/seed HOME=/home/seed DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 CLUTTER_IM_MODULE=xim LIBGL_ALWAYS_SOFTWARE=1 DISPLAY=:0 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh UPSTART_JOB=dbus PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin GNOME_DESKTOP_SESSION_ID=this-is-deprecated GTK_MODULES=gail:atk-bridge:unity-gtk-module GTK_IM_MODULE=ibus GDMSESSION=ubuntu XDG_VTNR=7 XDG_SESSION_ID=c1 GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 XDG_SEAT=seat0 COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path LANG=en_US.UTF-8 LOGNAME=seed LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SESSIONTYPE=gnome-session J2REDIR=/usr/lib/jvm/java-8-oracle/jre DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_CURRENT_DESKTOP=Unity DESKTOP_SESSION=ubuntu DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 GNOME_KEYRING_PID= QT_QPA_PLATFORMTHEME=appmenu-qt5 GDM_LANG=en_US UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+seed         -  0.0    -      -     - -        S    01:54   0:00 -
+seed      2174  0.0  1.7  79060 18308 ?        -    01:55   0:00 update-notifier GNOME_KEYRING_PID= USER=seed LANGUAGE=en_US J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT=seat0 XDG_SESSION_TYPE=x11 COMPIZ_CONFIG_PROFILE=ubuntu SESSION=ubuntu LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SHLVL=0 LIBGL_ALWAYS_SOFTWARE=1 J2REDIR=/usr/lib/jvm/java-8-oracle/jre HOME=/home/seed QT4_IM_MODULE=xim DESKTOP_SESSION=ubuntu QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 GTK_MODULES=gail:atk-bridge:unity-gtk-module XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 INSTANCE= DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN GNOME_KEYRING_CONTROL= QT_QPA_PLATFORMTHEME=appmenu-qt5 MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path IM_CONFIG_PHASE=1 SESSIONTYPE=gnome-session LOGNAME=seed GTK_IM_MODULE=ibus DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_ID=c1 GNOME_DESKTOP_SESSION_ID=this-is-deprecated GTK2_MODULES=overlay-scrollbar PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin DERBY_HOME=/usr/lib/jvm/java-8-oracle/db GDM_LANG=en_US XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 LANG=en_US.UTF-8 XDG_CURRENT_DESKTOP=Unity XMODIFIERS=@im=ibus XDG_SESSION_DESKTOP=ubuntu XAUTHORITY=/home/seed/.Xauthority XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed SSH_AUTH_SOCK=/run/user/1000/keyring/ssh SHELL=/bin/bash QT_ACCESSIBILITY=1 GDMSESSION=ubuntu GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_VTNR=7 QT_IM_MODULE=ibus PWD=/home/seed JAVA_HOME=/usr/lib/jvm/java-8-oracle CLUTTER_IM_MODULE=xim XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop JOB=dbus XDG_MENU_PREFIX=gnome- SESSION_MANAGER=local/VM:@/tmp/.ICE-unix/1663,unix/VM:/tmp/.ICE-unix/1663 DESKTOP_AUTOSTART_ID=101a8bf91f8a837cc0162738506757834700000016630024 GIO_LAUNCHED_DESKTOP_FILE=/etc/xdg/autostart/update-notifier.desktop GIO_LAUNCHED_DESKTOP_FILE_PID=2174
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed      2479  0.0  0.7  49152  7292 ?        -    01:55   0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.5 /org/gtk/gvfs/exec_spaw/1 XDG_RUNTIME_DIR=/run/user/1000 XMODIFIERS=@im XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed XDG_SESSION_TYPE=x11 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 QT_IM_MODULE=ibus USER=seed XAUTHORITY=/home/seed/.Xauthority DBUS_STARTER_BUS_TYPE=session SHLVL=0 UPSTART_INSTANCE= GNOME_KEYRING_CONTROL= XDG_SESSION_DESKTOP=ubuntu DBUS_DEBUG_OUTPUT=1 SHELL=/bin/bash UPSTART_EVENTS=starting QT_ACCESSIBILITY=1 INSTANCE= XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop LANGUAGE=en_US QT4_IM_MODULE=xim IM_CONFIG_PHASE=1 JAVA_HOME=/usr/lib/jvm/java-8-oracle GTK2_MODULES=overlay-scrollbar JOB=xsession-init PWD=/home/seed HOME=/home/seed DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 CLUTTER_IM_MODULE=xim LIBGL_ALWAYS_SOFTWARE=1 DISPLAY=:0 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh UPSTART_JOB=dbus PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin GTK_MODULES=gail:atk-bridge:unity-gtk-module GTK_IM_MODULE=ibus GDMSESSION=ubuntu XDG_VTNR=7 XDG_SESSION_ID=c1 XDG_SEAT=seat0 COMPIZ_CONFIG_PROFILE=ubuntu MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path LANG=en_US.UTF-8 LOGNAME=seed LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SESSIONTYPE=gnome-session J2REDIR=/usr/lib/jvm/java-8-oracle/jre DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_CURRENT_DESKTOP=Unity DESKTOP_SESSION=ubuntu DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 GNOME_KEYRING_PID= QT_QPA_PLATFORMTHEME=appmenu-qt5 GDM_LANG=en_US UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed      2507  0.0  0.6  47860  6236 ?        -    01:55   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.5 /org/gtk/gvfs/exec_spaw/5 XDG_RUNTIME_DIR=/run/user/1000 XMODIFIERS=@im XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed XDG_SESSION_TYPE=x11 DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 QT_IM_MODULE=ibus USER=seed XAUTHORITY=/home/seed/.Xauthority DBUS_STARTER_BUS_TYPE=session SHLVL=0 UPSTART_INSTANCE= GNOME_KEYRING_CONTROL= XDG_SESSION_DESKTOP=ubuntu DBUS_DEBUG_OUTPUT=1 SHELL=/bin/bash UPSTART_EVENTS=starting QT_ACCESSIBILITY=1 INSTANCE= XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop LANGUAGE=en_US QT4_IM_MODULE=xim IM_CONFIG_PHASE=1 JAVA_HOME=/usr/lib/jvm/java-8-oracle GTK2_MODULES=overlay-scrollbar JOB=xsession-init PWD=/home/seed HOME=/home/seed DBUS_STARTER_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN,guid=45cc676408fe6a652314bf1a60ffece6 CLUTTER_IM_MODULE=xim LIBGL_ALWAYS_SOFTWARE=1 DISPLAY=:0 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh UPSTART_JOB=dbus PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin GTK_MODULES=gail:atk-bridge:unity-gtk-module GTK_IM_MODULE=ibus GDMSESSION=ubuntu XDG_VTNR=7 XDG_SESSION_ID=c1 XDG_SEAT=seat0 COMPIZ_CONFIG_PROFILE=ubuntu MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path LANG=en_US.UTF-8 LOGNAME=seed LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SESSIONTYPE=gnome-session J2REDIR=/usr/lib/jvm/java-8-oracle/jre DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_CURRENT_DESKTOP=Unity DESKTOP_SESSION=ubuntu DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 GNOME_KEYRING_PID= QT_QPA_PLATFORMTHEME=appmenu-qt5 GDM_LANG=en_US UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:55   0:00 -
+seed      2515  0.0  0.7  65124  7272 ?        -    01:56   0:00 /usr/lib/i386-linux-gnu/deja-dup/deja-dup-monitor GNOME_KEYRING_PID= USER=seed LANGUAGE=en_US J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_SEAT=seat0 XDG_SESSION_TYPE=x11 COMPIZ_CONFIG_PROFILE=ubuntu SESSION=ubuntu LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: SHLVL=0 LIBGL_ALWAYS_SOFTWARE=1 J2REDIR=/usr/lib/jvm/java-8-oracle/jre HOME=/home/seed QT4_IM_MODULE=xim DESKTOP_SESSION=ubuntu QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 GTK_MODULES=gail:atk-bridge:unity-gtk-module XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 INSTANCE= DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN GNOME_KEYRING_CONTROL= QT_QPA_PLATFORMTHEME=appmenu-qt5 MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path IM_CONFIG_PHASE=1 SESSIONTYPE=gnome-session LOGNAME=seed GTK_IM_MODULE=ibus DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_SESSION_ID=c1 GNOME_DESKTOP_SESSION_ID=this-is-deprecated GTK2_MODULES=overlay-scrollbar PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin DERBY_HOME=/usr/lib/jvm/java-8-oracle/db GDM_LANG=en_US XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 LANG=en_US.UTF-8 XDG_CURRENT_DESKTOP=Unity XMODIFIERS=@im=ibus XDG_SESSION_DESKTOP=ubuntu XAUTHORITY=/home/seed/.Xauthority XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed SSH_AUTH_SOCK=/run/user/1000/keyring/ssh SHELL=/bin/bash QT_ACCESSIBILITY=1 GDMSESSION=ubuntu GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 XDG_VTNR=7 QT_IM_MODULE=ibus PWD=/home/seed JAVA_HOME=/usr/lib/jvm/java-8-oracle CLUTTER_IM_MODULE=xim XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop JOB=dbus XDG_MENU_PREFIX=gnome- SESSION_MANAGER=local/VM:@/tmp/.ICE-unix/1663,unix/VM:/tmp/.ICE-unix/1663 DESKTOP_AUTOSTART_ID=101a8bf91f8a837cc0162738506756533600000016630016 GIO_LAUNCHED_DESKTOP_FILE=/etc/xdg/autostart/deja-dup-monitor.desktop GIO_LAUNCHED_DESKTOP_FILE_PID=2515
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed      2647  0.5  5.5 205196 56516 ?        -    01:56   0:10 /usr/bin/python /usr/bin/terminator PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin XDG_VTNR=7 XDG_SESSION_ID=c1 CLUTTER_IM_MODULE=xim XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed SHELL=/bin/bash DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 GTK_MODULES=gail:atk-bridge:unity-gtk-module USER=seed QT_ACCESSIBILITY=1 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg DESKTOP_SESSION=ubuntu QT_IM_MODULE=ibus QT_QPA_PLATFORMTHEME=appmenu-qt5 PWD=/home/seed XDG_SESSION_TYPE=x11 XMODIFIERS=@im=ibus JAVA_HOME=/usr/lib/jvm/java-8-oracle LANG=en_US.UTF-8 MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path GDM_LANG=en_US IM_CONFIG_PHASE=1 COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx GDMSESSION=ubuntu SESSIONTYPE=gnome-session GTK2_MODULES=overlay-scrollbar SHLVL=0 XDG_SEAT=seat0 HOME=/home/seed LANGUAGE=en_US LIBGL_ALWAYS_SOFTWARE=1 XDG_SESSION_DESKTOP=ubuntu LOGNAME=seed QT4_IM_MODULE=xim XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 GTK_IM_MODULE=ibus J2REDIR=/usr/lib/jvm/java-8-oracle/jre XDG_CURRENT_DESKTOP=Unity XAUTHORITY=/home/seed/.Xauthority DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN SSH_AUTH_SOCK=/run/user/1000/keyring/ssh GNOME_KEYRING_CONTROL= GNOME_KEYRING_PID= GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 GNOME_DESKTOP_SESSION_ID=this-is-deprecated SESSION=ubuntu JOB=unity-settings-daemon INSTANCE= UPSTART_EVENTS=xsession started UPSTART_JOB=unity7 UPSTART_INSTANCE= UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 COMPIZ_BIN_PATH=/usr/bin/ GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/terminator.desktop GIO_LAUNCHED_DESKTOP_FILE_PID=2647 DESKTOP_STARTUP_ID=compiz-1713-VM-terminator-2_TIME171392
+seed         -  0.5    -      -     - -        Rl   01:56   0:10 -
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed         -  0.0    -      -     - -        Sl   01:56   0:00 -
+seed      2660  0.0  0.1   2508  1616 ?        -    01:56   0:00 gnome-pty-helper PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin XDG_VTNR=7 XDG_SESSION_ID=c1 CLUTTER_IM_MODULE=xim XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed SHELL=/bin/bash DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 GTK_MODULES=gail:atk-bridge:unity-gtk-module USER=seed QT_ACCESSIBILITY=1 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg DESKTOP_SESSION=ubuntu QT_IM_MODULE=ibus QT_QPA_PLATFORMTHEME=appmenu-qt5 PWD=/home/seed XDG_SESSION_TYPE=x11 XMODIFIERS=@im=ibus JAVA_HOME=/usr/lib/jvm/java-8-oracle LANG=en_US.UTF-8 MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path GDM_LANG=en_US IM_CONFIG_PHASE=1 COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx GDMSESSION=ubuntu SESSIONTYPE=gnome-session GTK2_MODULES=overlay-scrollbar SHLVL=0 XDG_SEAT=seat0 HOME=/home/seed LANGUAGE=en_US LIBGL_ALWAYS_SOFTWARE=1 XDG_SESSION_DESKTOP=ubuntu LOGNAME=seed QT4_IM_MODULE=xim XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 GTK_IM_MODULE=ibus J2REDIR=/usr/lib/jvm/java-8-oracle/jre XDG_CURRENT_DESKTOP=Unity XAUTHORITY=/home/seed/.Xauthority DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN SSH_AUTH_SOCK=/run/user/1000/keyring/ssh GNOME_KEYRING_CONTROL= GNOME_KEYRING_PID= GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 GNOME_DESKTOP_SESSION_ID=this-is-deprecated SESSION=ubuntu JOB=unity-settings-daemon INSTANCE= UPSTART_EVENTS=xsession started UPSTART_JOB=unity7 UPSTART_INSTANCE= UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 COMPIZ_BIN_PATH=/usr/bin/ GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/terminator.desktop GIO_LAUNCHED_DESKTOP_FILE_PID=2647 IBUS_DISABLE_SNOOPER=1 ORBIT_SOCKETDIR=/tmp/orbit-seed TERM=xterm COLORTERM=gnome-terminal WINDOWID=33554436
+seed         -  0.0    -      -     - -        S    01:56   0:00 -
+seed      2661  0.0  0.4   6984  4416 pts/1    -    01:56   0:00 /bin/bash XDG_SEAT=seat0 XDG_SESSION_ID=c1 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: GIO_LAUNCHED_DESKTOP_FILE_PID=2647 DISPLAY=:0 UPSTART_JOB=unity7 JOB=unity-settings-daemon COLORTERM=gnome-terminal GNOME_KEYRING_CONTROL= GNOME_DESKTOP_SESSION_ID=this-is-deprecated DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path QT_QPA_PLATFORMTHEME=appmenu-qt5 LOGNAME=seed INSTANCE= JAVA_HOME=/usr/lib/jvm/java-8-oracle SHELL=/bin/bash PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin IM_CONFIG_PHASE=1 QT4_IM_MODULE=xim CLUTTER_IM_MODULE=xim XMODIFIERS=@im=ibus SESSION=ubuntu J2REDIR=/usr/lib/jvm/java-8-oracle/jre SSH_AUTH_SOCK=/run/user/1000/keyring/ssh UPSTART_EVENTS=xsession started XDG_SESSION_DESKTOP=ubuntu GDMSESSION=ubuntu XAUTHORITY=/home/seed/.Xauthority QT_IM_MODULE=ibus GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/terminator.desktop XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 DESKTOP_SESSION=ubuntu XDG_RUNTIME_DIR=/run/user/1000 GTK_IM_MODULE=ibus GTK_MODULES=gail:atk-bridge:unity-gtk-module USER=seed PWD=/home/seed LIBGL_ALWAYS_SOFTWARE=1 DERBY_HOME=/usr/lib/jvm/java-8-oracle/db UPSTART_INSTANCE= TERMINATOR_UUID=urn:uuid:41fc43b9-d58e-48c4-af23-6135928e5dff IBUS_DISABLE_SNOOPER=1 HOME=/home/seed QT_ACCESSIBILITY=1 ORBIT_SOCKETDIR=/tmp/orbit-seed XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop LANGUAGE=en_US COMPIZ_BIN_PATH=/usr/bin/ COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed LANG=en_US.UTF-8 GTK2_MODULES=overlay-scrollbar GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 SHLVL=0 WINDOWID=33554436 J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_VTNR=7 GDM_LANG=en_US SESSIONTYPE=gnome-session DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN XDG_CURRENT_DESKTOP=Unity XDG_SESSION_TYPE=x11 GNOME_KEYRING_PID= QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 TERM=xterm
+seed         -  0.0    -      -     - -        Ss   01:56   0:00 -
+root      2732  0.0  0.3   6016  3192 ?        -    02:00   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /var/run/dhclient-enp0s3.pid -lf /var/lib/NetworkManager/dhclient-da36a4c0-baa4-3cb0-9425-4a6733214dcd-enp0s3.lease -cf /var/lib/NetworkManager/dhclient-enp0s3.conf enp0s3 LANG=en_US.UTF-8 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin GIO_USE_VFS=local
+root         -  0.0    -      -     - -        S    02:00   0:00 -
+root      2880  0.0  0.3   7032  3832 pts/1    -    02:01   0:00 sudo su XDG_VTNR=7 ORBIT_SOCKETDIR=/tmp/orbit-seed XDG_SESSION_ID=c1 XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seed IBUS_DISABLE_SNOOPER=1 TERMINATOR_UUID=urn:uuid:41fc43b9-d58e-48c4-af23-6135928e5dff CLUTTER_IM_MODULE=xim SESSION=ubuntu GIO_LAUNCHED_DESKTOP_FILE_PID=2647 ANDROID_HOME=/home/seed/android/android-sdk-linux GPG_AGENT_INFO=/home/seed/.gnupg/S.gpg-agent:0:1 TERM=xterm SHELL=/bin/bash DERBY_HOME=/usr/lib/jvm/java-8-oracle/db QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 LD_PRELOAD=/home/seed/lib/boost/libboost_program_options.so.1.64.0:/home/seed/lib/boost/libboost_filesystem.so.1.64.0:/home/seed/lib/boost/libboost_system.so.1.64.0 WINDOWID=33554436 UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1180 GNOME_KEYRING_CONTROL= GTK_MODULES=gail:atk-bridge:unity-gtk-module USER=seed LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36: QT_ACCESSIBILITY=1 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0 XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0 SSH_AUTH_SOCK=/run/user/1000/keyring/ssh DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path GIO_LAUNCHED_DESKTOP_FILE=/usr/share/applications/terminator.desktop XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg DESKTOP_SESSION=ubuntu PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/seed/android/android-sdk-linux/tools:/home/seed/android/android-sdk-linux/platform-tools:/home/seed/android/android-ndk/android-ndk-r8d:/home/seed/.local/bin QT_IM_MODULE=ibus QT_QPA_PLATFORMTHEME=appmenu-qt5 XDG_SESSION_TYPE=x11 PWD=/home/seed JOB=unity-settings-daemon XMODIFIERS=@im=ibus JAVA_HOME=/usr/lib/jvm/java-8-oracle GNOME_KEYRING_PID= LANG=en_US.UTF-8 GDM_LANG=en_US MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path COMPIZ_CONFIG_PROFILE=ubuntu-lowgfx IM_CONFIG_PHASE=1 GDMSESSION=ubuntu SESSIONTYPE=gnome-session GTK2_MODULES=overlay-scrollbar SHLVL=1 HOME=/home/seed XDG_SEAT=seat0 LANGUAGE=en_US LIBGL_ALWAYS_SOFTWARE=1 GNOME_DESKTOP_SESSION_ID=this-is-deprecated UPSTART_INSTANCE= XDG_SESSION_DESKTOP=ubuntu UPSTART_EVENTS=xsession started LOGNAME=seed COMPIZ_BIN_PATH=/usr/bin/ DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5bp7jUxFfN J2SDKDIR=/usr/lib/jvm/java-8-oracle XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop QT4_IM_MODULE=xim LESSOPEN=| /usr/bin/lesspipe %s INSTANCE= UPSTART_JOB=unity7 XDG_RUNTIME_DIR=/run/user/1000 DISPLAY=:0 XDG_CURRENT_DESKTOP=Unity GTK_IM_MODULE=ibus J2REDIR=/usr/lib/jvm/java-8-oracle/jre LESSCLOSE=/usr/bin/lesspipe %s %s XAUTHORITY=/home/seed/.Xauthority COLORTERM=gnome-terminal _=/usr/bin/sudo
+root         -  0.0    -      -     - -        S    02:01   0:00 -
+root      2881  0.0  0.3   6532  3264 pts/1    -    02:01   0:00 su TERM=xterm LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36: PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin LANG=en_US.UTF-8 HOME=/home/seed LANGUAGE=en_US DISPLAY=:0 XAUTHORITY=/home/seed/.Xauthority COLORTERM=gnome-terminal MAIL=/var/mail/root LOGNAME=root USER=root USERNAME=root SHELL=/bin/bash SUDO_COMMAND=/bin/su SUDO_USER=seed SUDO_UID=1000 SUDO_GID=1000 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+root         -  0.0    -      -     - -        S    02:01   0:00 -
+root      2882  0.0  0.3   5888  3416 pts/1    -    02:01   0:00 bash TERM=xterm LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36: PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:. LANG=en_US.UTF-8 HOME=/root LANGUAGE=en_US DISPLAY=:0 XAUTHORITY=/home/seed/.Xauthority COLORTERM=gnome-terminal MAIL=/var/mail/root LOGNAME=root USER=root USERNAME=root SHELL=/bin/bash SUDO_COMMAND=/bin/su SUDO_USER=seed SUDO_UID=1000 SUDO_GID=1000 LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: JAVA_HOME=/usr/lib/jvm/java-8-oracle
+root         -  0.0    -      -     - -        S    02:01   0:00 -
+root      2941  0.0  0.0      0     0 ?        -    02:09   0:00 [kworker/0:1]
+root         -  0.0    -      -     - -        S    02:09   0:00 -
+root      3011  0.0  0.0      0     0 ?        -    02:12   0:00 [kworker/u2:1]
+root         -  0.0    -      -     - -        R    02:12   0:00 -
+root      3049  0.0  0.0      0     0 ?        -    02:17   0:00 [kworker/0:2]
+root         -  0.0    -      -     - -        S    02:17   0:00 -
+root      3072  0.0  0.0      0     0 ?        -    02:21   0:00 [kworker/u2:2]
+root         -  0.0    -      -     - -        S    02:21   0:00 -
+root      3802  0.0  0.0      0     0 ?        -    02:25   0:00 [kworker/0:0]
+root         -  0.0    -      -     - -        S    02:25   0:00 -
+root      3812  0.0  0.4  10244  4852 pts/1    -    02:28   0:00 ps auxwwem ANDROID_HOME=/home/seed/android/android-sdk-linux SHELL=/bin/bash TERM=xterm LD_PRELOAD=/home/seed/lib/boost/libboost_program_options.so.1.64.0:/home/seed/lib/boost/libboost_filesystem.so.1.64.0:/home/seed/lib/boost/libboost_system.so.1.64.0 USER=root LD_LIBRARY_PATH=/home/seed/source/boost_1_64_0/stage/lib:/home/seed/source/boost_1_64_0/stage/lib: LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36: SUDO_USER=seed SUDO_UID=1000 USERNAME=root MAIL=/var/mail/root PATH=/home/seed/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:.:/home/seed/android/android-sdk-linux/tools:/home/seed/android/android-sdk-linux/platform-tools:/home/seed/android/android-ndk/android-ndk-r8d PWD=/home/seed JAVA_HOME=/usr/lib/jvm/java-8-oracle LANG=en_US.UTF-8 SHLVL=1 SUDO_COMMAND=/bin/su HOME=/root LANGUAGE=en_US LOGNAME=root LESSOPEN=| /usr/bin/lesspipe %s SUDO_GID=1000 DISPLAY=:0 LESSCLOSE=/usr/bin/lesspipe %s %s COLORTERM=gnome-terminal XAUTHORITY=/home/seed/.Xauthority _=/bin/ps
+root         -  0.0    -      -     - -        R+   02:28   0:00 -
